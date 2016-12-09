@@ -1,0 +1,24 @@
+{
+  "name": "matrix",
+  "description": "matrix site",
+  "main": "index.html",
+  "authors": [
+    "davegahn"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "fullpage.js": "^2.8.9"
+  },
+  "devDependencies": {
+    "isotope": "^3.0.1"
+  }
+}

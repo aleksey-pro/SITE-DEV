@@ -1,0 +1,98 @@
+/* colors */
+
+@text-color-white: #ffffff;
+@text-color-gray: #bbbbbb;
+@text-bold: #393c41;
+@brand-color: #3498db;
+@card-color: #eaeaea;
+@logo-font-size: 2em;
+
+/* fonts */
+
+@import 'https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&subset=cyrillic';
+@base-font: 14px;
+
+:root {
+	font-family: 'Arimo', sans-serif;
+	font-size: @base-font;
+	color: @text-color-gray;
+}
+
+
+/* breakpoints */
+
+@media_mobile : ~"all and (max-width: 480px) and (min-width: 320px)";
+@media_handheld : ~"all and (max-width: 768px)";
+@media_desktop : ~"all and (min-width: 769px) and (max-width: 1400px)";
+@media_widescreen : ~"all and (min-width: 1400px)";
+
+/* mixins */
+
+.b-btn {
+	display: inline-block;
+	border: 1px solid @text-color-white;
+	padding: .3em .6em;
+	
+	& a {
+		text-decoration: none;
+		color: inherit;
+	} 
+}
+
+.section__title {
+	display: block;
+	background-color: @brand-color;
+	font-size: 1.5rem;
+	padding: .7em;
+	width: 170px;
+	text-align: center;	
+	margin: 4em auto 3em;
+	transform: rotate(-5deg);	
+	
+	span {
+		transform: rotate(5deg);
+		display: block;
+		color: @text-color-white;
+	}
+}
+
+
+.inline {
+	display: inline;
+}
+
+.clean-ul-list {
+    list-style-type: none;
+	-webkit-padding-start: 0;
+	-moz-padding-start: 0;
+	padding-start: 0;
+	
+
+    & li {
+		margin         : 0;
+		padding        : 0;	
+        border         : 0;
+        font-size      : 100%;
+        font           : inherit;
+        vertical-align : baseline;
+    }
+}
+	
+.centered {
+	margin: 0 auto;
+	display: block;
+}
+
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    *zoom: 1;
+}
