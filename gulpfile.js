@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 	mainBowerFiles = require('main-bower-files'),
 	rename = require("gulp-rename"),
 	less = require('gulp-less'),
+  lessImport = require('gulp-less-import'),
 	uncss = require('gulp-uncss'),
 	fileinclude = require('gulp-file-include'),
 	csscomb = require('gulp-csscomb'),
@@ -25,7 +26,7 @@ var gulp = require('gulp'),
 	argv = require('yargs').argv;
 	
 var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
+var autoprefix = new LessAutoprefix({ browsers: ['>2%'] });
 	
 var config = {
 	server: {
@@ -118,27 +119,28 @@ gulp.task('fileinclude', function() {
 
 gulp.task('styles', function () {
   return gulp.src('dev/style/main.less')
-  .pipe(sourcemaps.init())
-	.pipe(plumber({
-		errorHandler: notify.onError(function(err){
-			return {
-				title: 'Styles',
-				message: err.message
-			};
-		})
-	}))
-//	.pipe(csscomb())
-	.pipe(less({
-		plugins: [autoprefix],
-		paths: ['dev/style'],
-		filename: 'main.less'
-	}))
-//	.pipe(uncss({html: ['dev/view/*.html']}))
-// 	.pipe(gulpif(argv.production, minifyCSS()), rename({suffix: '.min'}))
-	.pipe(rename({suffix: '.min'}))
-	.pipe(sourcemaps.write('.'))
-	.pipe(gulp.dest('prod/css'))
-	.pipe(browserSync.reload({stream: true}))
+    .pipe(sourcemaps.init())
+    .pipe(plumber({
+      errorHandler: notify.onError(function(err){
+        return {
+          title: 'Styles',
+          message: err.message
+        };
+      })
+    }))
+    //	.pipe(csscomb())
+    // .pipe(lessImport('main.less'))
+    .pipe(less({
+      plugins: [autoprefix],
+      paths: ['dev/style/**'],
+      filename: 'main.less'
+    }))
+    .pipe(gulpif(argv.production, minifyCSS()))
+    .pipe(rename({suffix: '.min'}))
+    // .pipe(uncss({html: ['dev/view/*.html']})) doesn't work correctly
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('prod/css'))
+    .pipe(browserSync.reload({stream: true}))
 });
 
 
