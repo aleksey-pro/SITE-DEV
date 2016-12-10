@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fa4236b-c651-47e4-b32b-00b30b7dfa69" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dev/style/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/prod/css/main.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/prod/css/main.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/prod/scripts/myscripts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/prod/scripts/myscripts.js.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-section1.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-section1.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/view/blocks/b-section1.html" afterPath="$PROJECT_DIR$/dev/view/blocks/b-section1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/index.html" afterPath="$PROJECT_DIR$/prod/index.html" />
-    </list>
+    <list default="true" id="1fa4236b-c651-47e4-b32b-00b30b7dfa69" name="Default" comment="" />
     <ignored path="MATRIX.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +24,7 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3406">
+            <state relative-caret-position="-182">
               <caret line="131" column="37" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
               <folding />
             </state>
@@ -466,12 +455,12 @@
       <workItem from="1480756854424" duration="10040000" />
       <workItem from="1480836645063" duration="47487000" />
       <workItem from="1481101995338" duration="43355000" />
-      <workItem from="1481345701627" duration="3218000" />
+      <workItem from="1481345701627" duration="4585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149092000" />
+    <option name="totallyTimeSpent" value="150459000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -483,7 +472,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="-4" width="1386" height="908" extended-state="1" />
+    <frame x="58" y="-4" width="1386" height="908" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22697125" sideWeight="0.36677632" order="3" side_tool="true" content_ui="tabs" />
@@ -822,7 +811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prod/css/main.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2788">
+        <state relative-caret-position="548">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
@@ -830,7 +819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3406">
+        <state relative-caret-position="-182">
           <caret line="131" column="37" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
           <folding />
         </state>
