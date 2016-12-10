@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa4236b-c651-47e4-b32b-00b30b7dfa69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/css/vendor.min.css" afterPath="$PROJECT_DIR$/prod/css/vendor.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/css/vendor.min.css.map" afterPath="$PROJECT_DIR$/prod/css/vendor.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/flexie.min.js" afterPath="$PROJECT_DIR$/prod/scripts/flexie.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/flexie.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/flexie.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/myscripts.min.js" afterPath="$PROJECT_DIR$/prod/scripts/myscripts.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/myscripts.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/myscripts.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/storage.min.js" afterPath="$PROJECT_DIR$/prod/scripts/storage.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/storage.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/storage.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/svg-sprite.min.js" afterPath="$PROJECT_DIR$/prod/scripts/svg-sprite.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/svg-sprite.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/svg-sprite.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/transformicons.min.js" afterPath="$PROJECT_DIR$/prod/scripts/transformicons.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/transformicons.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/transformicons.min.js.map" />
     </list>
     <ignored path="MATRIX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,18 +35,18 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-572">
+            <state relative-caret-position="-962">
               <caret line="131" column="37" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vendor.min.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/prod/css/vendor.min.css">
+      <file leaf-file-name="myscripts.min.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/prod/scripts/myscripts.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -238,24 +246,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prod" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MATRIX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MATRIX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -434,7 +424,7 @@
       <node-options />
       <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
       <tasks>
-        <task>bowercss</task>
+        <task>scripts</task>
       </tasks>
       <arguments>--production</arguments>
       <envs />
@@ -468,12 +458,12 @@
       <workItem from="1480756854424" duration="10040000" />
       <workItem from="1480836645063" duration="47487000" />
       <workItem from="1481101995338" duration="43355000" />
-      <workItem from="1481345701627" duration="5016000" />
+      <workItem from="1481345701627" duration="5257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150890000" />
+    <option name="totallyTimeSpent" value="151131000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -486,10 +476,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-4" width="1386" height="908" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22697125" sideWeight="0.36677632" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22697125" sideWeight="0.6332237" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22697125" sideWeight="0.6332237" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996207" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996207" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27686474" sideWeight="0.5025792" order="2" side_tool="true" content_ui="tabs" />
@@ -783,14 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prod/scripts/myscripts.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev/view/blocks/b-section1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -823,18 +805,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prod/css/vendor.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-572">
+        <state relative-caret-position="-962">
           <caret line="131" column="37" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prod/css/vendor.min.css">
+    <entry file="file://$PROJECT_DIR$/prod/scripts/myscripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
