@@ -63,13 +63,21 @@ gulp.task('sprite', function() {
 
 gulp.task('SVG', function() {
 	return gulp.src('dev/images/SVG/*.svg')
+  .pipe (cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('path').attr('style', 'fill:currentColor').html();
+        $('svg').attr('style',  'display:none').html();
+      },
+      parserOptions: { xmlMode: true }
+    }))
 	.pipe(svgmin(
 		{
 			js2svg: {
         pretty: true
       }
 		},
-    {plugins: [{convertShapeToPath: false}]
+    {plugins: [{convertShapeToPath: false, removeViewBox: true}]
 		},
 		function getOptions (file) {
 			var prefix = path.basename(file.relative, path.extname(file.relative));
@@ -84,14 +92,6 @@ gulp.task('SVG', function() {
 			}
 		}
 	))
-	.pipe (cheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-				$('path').attr('style', 'fill:currentColor').html();
-        $('svg').attr('style',  'display:none').html();
-			},
-			parserOptions: { xmlMode: true }
-		}))
 	.pipe(svgstore({inlineSvg: true}))
 	.pipe(gulp.dest('prod/images'))
 	.pipe(browserSync.reload({stream: true}))
@@ -187,9 +187,31 @@ gulp.task('jshint', function() {
 
 gulp.task('modernizr', function() {
   gulp.src(['dev/scripts/*.js', 'dev/styles/**/*.css'])
-    .pipe(modernizr())    
-    .pipe(gulpif(argv.production, uglify()))
-    .pipe(rename({suffix: '.min'}))
+  // gulp.src('dev/scripts/modernizr-config.json')
+    .pipe(modernizr(
+      {
+        "minify": false,
+        "options": [
+          "setClasses"
+        ],
+        "tests": [
+          "test/json",
+          "test/svg",
+          "test/css/backgroundsize",
+          "test/css/calc",
+          "test/css/flexbox",
+          "test/css/flexboxlegacy",
+          "test/css/flexboxtweener",
+          "test/css/flexwrap",
+          "test/css/mediaqueries",
+          "test/storage/localstorage",
+          "test/svg/clippaths",
+          "test/svg/foreignobject",
+          "test/svg/inline"
+        ]
+      }
+    ))
+    .pipe(gulpif(argv.production, uglify(), rename({suffix: '.min'})))
     .pipe(gulp.dest("prod/scripts/"))
 });
 	
