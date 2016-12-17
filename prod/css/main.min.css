@@ -35,6 +35,9 @@
   display: block;
   color: #ffffff;
 }
+figure {
+  margin: 0;
+}
 .inline {
   display: inline;
 }
@@ -481,7 +484,7 @@
   background: url('../../images/spritesheet.png') 0 no-repeat;
 }
 .footer-wrapper .b-recent-block {
-  min-width: 300px;
+  width: 300px;
   height: 80px;
   margin-bottom: 1em;
 }
@@ -674,7 +677,7 @@
   width: 0;
   border-top: 7.22px solid #3498db;
 }
-.b-section1__bg {
+.b-section__bg {
   background: #000 url('../images/main.jpg') 0 0 no-repeat;
   background-size: cover;
 }
@@ -1169,6 +1172,54 @@
 }
 .ultimate {
   background: #eaeaea url("../../images/price3cut.jpg") 0 0 no-repeat;
+}
+/* cross-browser functions */
+.no-flexbox .b-header {
+  display: inline-block;
+}
+.no-flexbox .b-header .b-header__logo {
+  float: left;
+  margin-left: 1em;
+}
+.no-flexbox .b-header .b-header-elements {
+  float: right;
+  margin-right: 3em;
+}
+.no-flexbox .b-news {
+  display: block;
+}
+.no-flexbox .b-news .b-news__card {
+  display: inline-block;
+  width: 28%;
+  padding-left: 3em;
+}
+.no-flexbox .b-news .b-news__card .b-news__caption {
+  left: 2em;
+  right: 2em;
+}
+.no-flexbox .b-team {
+  display: block;
+}
+.no-flexbox .b-team .b-team__card {
+  display: inline-block;
+  width: 50%;
+}
+.no-flexbox .b-pricing {
+  display: block;
+}
+.no-flexbox .b-pricing .b-pricing__card-wrapper {
+  float: left;
+  width: 33%;
+}
+.no-flexbox .b-pricing .b-pricing__card-wrapper .b-pricing__card {
+  margin: 0 auto;
+}
+.no-flexbox .footer-wrapper {
+  display: block;
+}
+.no-flexbox .footer-wrapper > * {
+  float: left;
+  margin-left: 2em;
 }
 
 /*# sourceMappingURL=main.min.css.map */

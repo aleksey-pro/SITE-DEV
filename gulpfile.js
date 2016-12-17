@@ -67,7 +67,7 @@ gulp.task('SVG', function() {
       run: function ($) {
         $('[fill]').removeAttr('fill');
         $('path').attr('style', 'fill:currentColor').html();
-        $('svg').attr('style',  'display:none').html();
+        $('svg').attr('style',  'display:none');
       },
       parserOptions: { xmlMode: true }
     }))
@@ -77,8 +77,7 @@ gulp.task('SVG', function() {
         pretty: true
       }
 		},
-    {plugins: [{convertShapeToPath: false, removeViewBox: true}]
-		},
+    {plugins: [{convertShapeToPath: false, removeViewBox: true}]},
 		function getOptions (file) {
 			var prefix = path.basename(file.relative, path.extname(file.relative));
 			return {
@@ -186,33 +185,11 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('modernizr', function() {
-  gulp.src(['dev/scripts/*.js', 'dev/styles/**/*.css'])
-  // gulp.src('dev/scripts/modernizr-config.json')
-    .pipe(modernizr(
-      {
-        "minify": false,
-        "options": [
-          "setClasses"
-        ],
-        "tests": [
-          "test/json",
-          "test/svg",
-          "test/css/backgroundsize",
-          "test/css/calc",
-          "test/css/flexbox",
-          "test/css/flexboxlegacy",
-          "test/css/flexboxtweener",
-          "test/css/flexwrap",
-          "test/css/mediaqueries",
-          "test/storage/localstorage",
-          "test/svg/clippaths",
-          "test/svg/foreignobject",
-          "test/svg/inline"
-        ]
-      }
-    ))
-    .pipe(gulpif(argv.production, uglify(), rename({suffix: '.min'})))
-    .pipe(gulp.dest("prod/scripts/"))
+  var settings = require('./node_modules/modernizr/lib/config-all.json');
+   gulp.src('./js/*.js')
+  .pipe(modernizr('modernizr.js', settings))
+   .pipe(rename({suffix: '.min'}))
+   .pipe(gulp.dest("prod/scripts/"))
 });
 	
 gulp.task ('watch', function(){

@@ -59,12 +59,36 @@ $(document).ready(function() {
 	});
 });
 
-Modernizr.load(
-  {
-    test : Modernizr.localstorage,
-    nope : ['storage.min.js']
-  }, {
-    test : Modernizr.flexboxlegacy,
-    nope : ['flexie.min.js']
-  }
-);
+// Modernizr 3 detections
+// https://medium.com/@MarkHoKane/modernizr-ditched-yepnope-js-how-to-load-your-polyfill-fec5dddb5867#.qwle9xdmz
+// https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
+
+if (Modernizr.localstorage) {
+  console.log('storage unnecessary!');
+}else{
+  jQuery.getScript("scripts/storage.min.js")
+  .done(function() {
+    console.log('storage Loaded!');
+  })
+  .fail(function() {
+    console.log('storage Did Not Load!');
+  });
+}
+if (Modernizr.flexboxlegacy) {
+  console.log('flexie unnecessary!');
+}else{
+  jQuery.getScript("scripts/flexie.min.js")
+  .done(function() {
+    console.log('flexie Loaded!');
+  })
+  .fail(function() {
+    console.log('flexie Did Not Load!');
+  });
+}
+
+// if (Modernizr.flexbox && Modernizr.flexwrap) {
+//   // Modern Flexbox with `flex-wrap` supported
+// }
+// else {
+//   // Either old Flexbox syntax, or `flex-wrap` not supported
+// }

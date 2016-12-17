@@ -1,0 +1,58 @@
+.no-flexbox {
+  .b-header {
+    display: inline-block;
+      .b-header__logo {
+        float: left;
+        margin-left: 1em;
+      }
+    .b-header-elements {
+      float: right;
+      margin-right: 3em;
+    }
+  }
+  .b-news {
+    display: block;
+
+    .b-news__card {
+      display: inline-block;
+      width: 28%;
+      padding-left: 3em;
+
+      .b-news__caption {
+        left: 2em;
+        right: 2em;
+      }
+    }
+  }
+
+  .b-team {
+    display: block;
+
+    .b-team__card {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+
+  .b-pricing {
+    display: block;
+
+    .b-pricing__card-wrapper {
+      float: left;
+      width: 33%;
+
+      .b-pricing__card {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .footer-wrapper {
+    display: block;
+
+    & > * {
+      float: left;
+      margin-left: 2em;
+    }
+  }
+}
