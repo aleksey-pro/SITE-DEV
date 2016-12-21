@@ -2,10 +2,10 @@ $(document).ready(function() {
   
 //some hover effects  
   $('.b-team__caption').hover(function(){
-    $(this).parent('.b-team__card').find('.b-team__name').toggleClass('b-team__name_active');
+    $(this).parents('.b-team__card').find('.b-team__name').toggleClass('b-team__name_active');
   });
   $('.b-news__caption').hover(function(){
-    $(this).parent('.b-news__card').find('.b-news__title').toggleClass('b-news__title_active');
+    $(this).closest('.b-news__card').find('.b-news__title').toggleClass('b-news__title_active');
   });
   $('.b-recent-block__text').hover(function(){
     $(this).toggleClass('b-recent-block__text_active').parent('.b-recent-block').find('.b-recent-block__link').toggleClass('b-recent-block__link_active');
@@ -85,10 +85,3 @@ if (Modernizr.flexboxlegacy) {
     console.log('flexie Did Not Load!');
   });
 }
-
-// if (Modernizr.flexbox && Modernizr.flexwrap) {
-//   // Modern Flexbox with `flex-wrap` supported
-// }
-// else {
-//   // Either old Flexbox syntax, or `flex-wrap` not supported
-// }

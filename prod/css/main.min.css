@@ -519,7 +519,7 @@ figure {
   line-height: 2.8em;
   opacity: 0;
 }
-.footer-wrapper .b-recent-block .b-recent-block__link #glass-ico {
+.footer-wrapper .b-recent-block .b-recent-block__link .glass-ico {
   color: #ffffff;
 }
 .footer-wrapper .b-recent-block .b-recent-block__link_active {
