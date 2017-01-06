@@ -29,20 +29,20 @@ var gulp = require('gulp'),
 var LessAutoprefix = require('less-plugin-autoprefix');
 var autoprefix = new LessAutoprefix({ browsers: ['>2%'] });
 	
-// var config = {
-// 	server: {
-// 		baseDir: 'prod'
-// 	},
-// 	tunnel: false,
-// 	host: 'localhost',
-// 	port: 3000,
-// 	logPrefix: "Webxieter prod.",
-// 	browser: "chrome"
-// };
-//
-// gulp.task ('browserSync', function(){
-// 	browserSync(config)
-// });
+var config = {
+  server: {
+    baseDir: 'prod'
+  },
+  tunnel: false,
+  host: 'localhost',
+  port: 3000,
+  logPrefix: "Webxieter prod.",
+  browser: "chrome"
+};
+
+gulp.task ('browserSync', function(){
+  browserSync(config)
+});
 
 gulp.task('images', function() {
 	return gulp.src('dev/images/*.jpg')
@@ -202,7 +202,7 @@ gulp.task ('watch', function(){
 	gulp.watch('bower_components/**/*', ['bowerjs'], ['bowercss']);
 });
 
-gulp.task ('default', ['modernizr', 'scripts', 'sprite', 'fonts', 'bowerjs', 'bowercss', 'styles', 'HTML', 'jshint', 'watch']);
+gulp.task ('default', ['modernizr', 'scripts', 'sprite', 'fonts', 'bowerjs', 'bowercss', 'styles', 'HTML', 'browserSync', 'jshint', 'watch']);
 
-// 'browserSync', 'gulp-inject' ,'images'
+//  'gulp-inject' ,'images'
 // http://geekswithblogs.net/shaunxu/archive/2015/02/17/10-awesome-gulp-plugins-working-with-angularjs-and-bower.aspx
