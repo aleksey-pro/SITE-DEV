@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $('.tcon-menu--xbutterfly').click(function(){
     console.log(this);
-    $('.b-header-mobile').toggleClass('b-header-mobile_shown');
+    $('.b-dropdown-menu').toggleClass('b-dropdown-menu_active');
   });
 
 // transformicons init	
@@ -57,7 +57,32 @@ $(document).ready(function() {
 		$( this ).addClass('b-gallery__btn_checked');
 	  });
 	});
+
+  // gallery pictures pop-up
+
+  function popUp() {
+    var animTime = 800;
+    var modal = $('#modal-image');
+    if ($(window).innerWidth > 400) {
+      $('.b-gallery__item img').on('click', function() {
+        modal.css('top', (window.innerHeight - modal.height()) / 2);
+        modal.css('left', ($('.b-gallery__grid').width() - modal.width()) / 2);
+        modal.attr({'src': $(this).attr('src'), 'width': '400', 'height': '400'}).fadeIn(animTime);
+      });
+      modal.on('click', function() {
+        $(this).fadeOut(animTime);
+      });
+    }
+  }
+  $(window).bind('resize',function(){
+    popUp();
+  });
+
 });
+
+
+
+
 
 // Modernizr 3 detections
 // https://medium.com/@MarkHoKane/modernizr-ditched-yepnope-js-how-to-load-your-polyfill-fec5dddb5867#.qwle9xdmz

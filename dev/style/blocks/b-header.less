@@ -20,7 +20,7 @@
   }
 }
 
-.b-header-mobile {
+.b-dropdown-menu {
   position: fixed;
   top: -150px;
   left: 0;
@@ -36,17 +36,17 @@
   -o-transition: all 1s ease-in;
   transition: all 1s ease-in;
 
-  .b-header-mobile__menu {
+  .clean-ul-list;
 
-    .b-header-mobile__item {
-      float: left;
-      width: 42%;
-      list-style-type: none;
-      display: block;
-      padding: .2em .5em;
-      border-left: 1px solid #217dbb;
-      margin: .2em;
-    }
+
+  .b-dropdown-menu__item {
+    float: left;
+    width: 42%;
+    list-style-type: none;
+    display: block;
+    padding: .2em .5em;
+    border-left: 1px solid #217dbb;
+    margin: .2em;
   }
 
   @media all and (min-width: 769px){
@@ -55,10 +55,13 @@
 
 }
 
-.b-header-mobile_shown {
+.b-dropdown-menu_active {
   position: fixed;
   top: 0;
   padding-top: 3em;
+
+  .clean-ul-list;
+  -webkit-padding-start: 1em;
 
   @media all and (min-width: 769px){
     top: -150px;
@@ -79,6 +82,8 @@
 .b-topmenu {
 	float: left;
 
+    .clean-ul-list;
+
 	&__item {
       .inline;
       .clean-ul-list;
@@ -87,12 +92,6 @@
       @media all and (max-width: 1000px) {
         margin-left: .7em !important;
       }
-    }
-
-    .b-topmenu__nav {
-      -webkit-padding-start: 0;
-      -moz-padding-start: 0;
-      padding-start: 0;
     }
 
     @media @media_handheld {
@@ -130,241 +129,241 @@
   }
 }
 
-  .b-header-elements > * {
-    display: table-cell;
-    vertical-align: middle;
-    .clearfix;
-  }
+.b-header-elements > * {
+  display: table-cell;
+  vertical-align: middle;
+  .clearfix;
+}
 
-  .b-header-element__input {
-    display: none;
-    width: 5em;
-    height: 1.5em;
-    border: 1px solid @text-color-white;
-    border-radius: 5px 0 0 5px;
-    float: left;
-    overflow: hidden;
-    padding: 0.1em 0 0.1em 0.3em;
-    margin-top: 8px;
+.b-header-elements__input {
+  display: none;
+  width: 5em;
+  height: 1.5em;
+  border: 1px solid @text-color-white;
+  border-radius: 5px 0 0 5px;
+  float: left;
+  overflow: hidden;
+  padding: 0.1em 0 0.1em 0.3em;
+  margin-top: 8px;
 
-    input {
-      border: 0;
-      outline: none;
-      background-color: transparent;
-      color: @text-color-white;
-    }
-
-  }
-
-  .b-header-element__basket {
-    margin-left: 0.71em;
-    position: relative;
-
-    &:after {
-      border-radius: 50%;
-      background-color: @brand-color;
-      width: 70%;
-      text-align: center;
-      color: #fff;
-      margin-right: -100%;
-      font-size: 0.7rem;
-      display: inline-block;
-      content: '0';
-      position: relative;
-      top: -5px;
-    }
-    //http://stackoverflow.com/questions/13673441/svg-use-element-and-hover-style
-
-    #shopping-cart-svg {
-      transition: fill 1s linear;
-      color: @text-color-white;
-    }
-    #shopping-cart-svg:hover {
-      cursor: pointer;
-      color: @brand-color;
-    }
-
-  }
-
-  /* searchButton-style */
-
-  .tcon {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    cursor: pointer;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 40px;
-    transition: 0.3s;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 40px;
-    background: transparent;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .tcon > * {
-    display: block;
-  }
-  .tcon:hover, .tcon:focus {
-    outline: none;
-  }
-  .tcon::-moz-focus-inner {
+  input {
     border: 0;
+    outline: none;
+    background-color: transparent;
+    color: @text-color-white;
   }
 
-  .tcon-menu__lines {
-    display: inline-block;
-    height: 5.71429px;
-    width: 40px;
-    border-radius: 2.85714px;
-    transition: 0.3s;
-    background: @text-color-white;
-    position: relative;
-  }
+}
 
-  .tcon-menu__lines::before, .tcon-menu__lines::after {
-    display: inline-block;
-    height: 5.71429px;
-    width: 40px;
-    border-radius: 2.85714px;
-    transition: 0.3s;
-    background: @text-color-white;
-    content: '';
-    position: absolute;
-    left: 0;
-    -webkit-transform-origin: 2.85714px center;
-    transform-origin: 2.85714px center;
-    width: 100%;
-  }
+.b-header-elements__basket {
+  margin-left: 0.71em;
+  position: relative;
 
-  .tcon-menu__lines::before {
-    top: 10px;
-  }
-
-  .tcon-menu__lines::after {
-    top: -10px;
-  }
-
-  .tcon-transform .tcon-menu__lines {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8);
-    transform: scale3d(0.8, 0.8, 0.8);
-  }
-
-  .tcon-menu--xbutterfly {
-    width: auto;
-  }
-  .tcon-menu--xbutterfly .tcon-menu__lines::before, .tcon-menu--xbutterfly .tcon-menu__lines::after {
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    transition: top .3s .6s ease, -webkit-transform .3s ease;
-    transition: top .3s .6s ease, transform .3s ease;
-  }
-  .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines {
-    background: transparent;
-  }
-  .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before, .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
-    top: 0;
-    transition: top .3s ease, -webkit-transform .3s .5s ease;
-    transition: top .3s ease, transform .3s .5s ease;
-    width: 40px;
-  }
-  .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg);
-  }
-  .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
-  }
-
-  .tcon-visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  .tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-  }
-
-  .tcon-search__item {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    border-radius: 0;
-    transition: 0.3s;
-    background: transparent;
-    position: relative;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  .tcon-search__item::before, .tcon-search__item::after {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    border-radius: 0;
-    transition: 0.3s;
-    background: transparent;
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-  .tcon-search__item::before {
-    height: 4px;
-    left: 0;
-    background: @text-color-white;
-    border-radius: 2.85714px;
-  }
-  .tcon-search__item::after {
-    right: 0;
-    background: white;
+  &:after {
     border-radius: 50%;
-    width: 12.00012px;
-    height: 12.00012px;
-    border: 2px solid @text-color-white;
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
+    background-color: @brand-color;
+    width: 70%;
+    text-align: center;
+    color: #fff;
+    margin-right: -100%;
+    font-size: 0.7rem;
+    display: inline-block;
+    content: '0';
+    position: relative;
+    top: -5px;
+  }
+  //http://stackoverflow.com/questions/13673441/svg-use-element-and-hover-style
+
+  #shopping-cart-svg {
+    transition: fill 1s linear;
+    color: @text-color-white;
+  }
+  #shopping-cart-svg:hover {
+    cursor: pointer;
+    color: @brand-color;
   }
 
-  .tcon-search--xcross.tcon-transform {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8);
-    transform: scale3d(0.8, 0.8, 0.8);
-  }
-  .tcon-search--xcross.tcon-transform .tcon-search__item::before, .tcon-search--xcross.tcon-transform .tcon-search__item::after {
-    border-radius: 2.85714px;
-    background: @brand-color;
-  }
-  .tcon-search--xcross.tcon-transform .tcon-search__item::after {
-    height: 4px;
-    width: 100%;
-    top: 0;
-    right: 0;
-    border: 0;
-    -webkit-transform: rotate3d(0, 0, 1, 90deg);
-    transform: rotate3d(0, 0, 1, 90deg);
-  }
+}
+
+/* searchButton-style */
+
+.tcon {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  transition: 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 40px;
+  background: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.tcon > * {
+  display: block;
+}
+.tcon:hover, .tcon:focus {
+  outline: none;
+}
+.tcon::-moz-focus-inner {
+  border: 0;
+}
+
+.tcon-menu__lines {
+  display: inline-block;
+  height: 5.71429px;
+  width: 40px;
+  border-radius: 2.85714px;
+  transition: 0.3s;
+  background: @text-color-white;
+  position: relative;
+}
+
+.tcon-menu__lines::before, .tcon-menu__lines::after {
+  display: inline-block;
+  height: 5.71429px;
+  width: 40px;
+  border-radius: 2.85714px;
+  transition: 0.3s;
+  background: @text-color-white;
+  content: '';
+  position: absolute;
+  left: 0;
+  -webkit-transform-origin: 2.85714px center;
+  transform-origin: 2.85714px center;
+  width: 100%;
+}
+
+.tcon-menu__lines::before {
+  top: 10px;
+}
+
+.tcon-menu__lines::after {
+  top: -10px;
+}
+
+.tcon-transform .tcon-menu__lines {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8);
+  transform: scale3d(0.8, 0.8, 0.8);
+}
+
+.tcon-menu--xbutterfly {
+  width: auto;
+}
+.tcon-menu--xbutterfly .tcon-menu__lines::before, .tcon-menu--xbutterfly .tcon-menu__lines::after {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  transition: top .3s .6s ease, -webkit-transform .3s ease;
+  transition: top .3s .6s ease, transform .3s ease;
+}
+.tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines {
+  background: transparent;
+}
+.tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before, .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
+  top: 0;
+  transition: top .3s ease, -webkit-transform .3s .5s ease;
+  transition: top .3s ease, transform .3s .5s ease;
+  width: 40px;
+}
+.tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+.tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.tcon-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.tcon-search__item {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 0;
+  transition: 0.3s;
+  background: transparent;
+  position: relative;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.tcon-search__item::before, .tcon-search__item::after {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 0;
+  transition: 0.3s;
+  background: transparent;
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.tcon-search__item::before {
+  height: 4px;
+  left: 0;
+  background: @text-color-white;
+  border-radius: 2.85714px;
+}
+.tcon-search__item::after {
+  right: 0;
+  background: white;
+  border-radius: 50%;
+  width: 12.00012px;
+  height: 12.00012px;
+  border: 2px solid @text-color-white;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.tcon-search--xcross.tcon-transform {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8);
+  transform: scale3d(0.8, 0.8, 0.8);
+}
+.tcon-search--xcross.tcon-transform .tcon-search__item::before, .tcon-search--xcross.tcon-transform .tcon-search__item::after {
+  border-radius: 2.85714px;
+  background: @brand-color;
+}
+.tcon-search--xcross.tcon-transform .tcon-search__item::after {
+  height: 4px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  border: 0;
+  -webkit-transform: rotate3d(0, 0, 1, 90deg);
+  transform: rotate3d(0, 0, 1, 90deg);
+}
 
