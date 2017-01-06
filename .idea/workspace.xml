@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa4236b-c651-47e4-b32b-00b30b7dfa69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/scripts/myscripts.js" afterPath="$PROJECT_DIR$/dev/scripts/myscripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-footer.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-footer.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-header.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-header.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-section1.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-section1.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-section2.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-section2.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-section3.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-section3.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/variables_and_mixins.less" afterPath="$PROJECT_DIR$/dev/style/variables_and_mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/view/blocks/b-footer.html" afterPath="$PROJECT_DIR$/dev/view/blocks/b-footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/view/blocks/b-header.html" afterPath="$PROJECT_DIR$/dev/view/blocks/b-header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/view/blocks/b-section1.html" afterPath="$PROJECT_DIR$/dev/view/blocks/b-section1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/view/blocks/b-section2.html" afterPath="$PROJECT_DIR$/dev/view/blocks/b-section2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/view/blocks/b-section3.html" afterPath="$PROJECT_DIR$/dev/view/blocks/b-section3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/css/main.min.css" afterPath="$PROJECT_DIR$/prod/css/main.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/css/main.min.css.map" afterPath="$PROJECT_DIR$/prod/css/main.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/index.html" afterPath="$PROJECT_DIR$/prod/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/myscripts.min.js" afterPath="$PROJECT_DIR$/prod/scripts/myscripts.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/myscripts.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/myscripts.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
     </list>
     <ignored path="MATRIX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/view/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -95,7 +87,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dev/view/blocks/b-section6.html" />
         <option value="$PROJECT_DIR$/dev/style/browser-combatibile.less" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/dev/view/index.html" />
         <option value="$PROJECT_DIR$/dev/view/blocks/b-section4.html" />
         <option value="$PROJECT_DIR$/dev/view/blocks/b-section5.html" />
@@ -113,6 +104,7 @@
         <option value="$PROJECT_DIR$/dev/scripts/myscripts.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -377,12 +369,12 @@
       <workItem from="1482347369034" duration="10000" />
       <workItem from="1482742632098" duration="14283000" />
       <workItem from="1483565215394" duration="604000" />
-      <workItem from="1483734691158" duration="780000" />
+      <workItem from="1483734691158" duration="1210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202966000" />
+    <option name="totallyTimeSpent" value="203396000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="192" column="3" selection-start-line="192" selection-start-column="3" selection-end-line="192" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/links.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -737,6 +722,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
           <folding />
         </state>
       </provider>
