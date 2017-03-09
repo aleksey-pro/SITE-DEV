@@ -27,7 +27,7 @@ var gulp = require('gulp'),
   // lessImport = require('gulp-less-import'),
 	
 var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({ browsers: ['>2%'] });
+var autoprefix = new LessAutoprefix();
 	
 var config = {
   server: {
