@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa4236b-c651-47e4-b32b-00b30b7dfa69" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/MATRIX_node_modules.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MATRIX.iml" afterPath="$PROJECT_DIR$/.idea/MATRIX.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-footer.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-footer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-header.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-header.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-section4.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-section4.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-section5.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-section5.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/style/blocks/b-section6.less" afterPath="$PROJECT_DIR$/dev/style/blocks/b-section6.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/css/main.min.css" afterPath="$PROJECT_DIR$/prod/css/main.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/css/main.min.css.map" afterPath="$PROJECT_DIR$/prod/css/main.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/css/vendor.min.css" afterPath="$PROJECT_DIR$/prod/css/vendor.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/css/vendor.min.css.map" afterPath="$PROJECT_DIR$/prod/css/vendor.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/flexie.min.js" afterPath="$PROJECT_DIR$/prod/scripts/flexie.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/flexie.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/flexie.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/myscripts.min.js" afterPath="$PROJECT_DIR$/prod/scripts/myscripts.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/myscripts.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/myscripts.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/storage.min.js" afterPath="$PROJECT_DIR$/prod/scripts/storage.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/storage.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/storage.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/svg-sprite.min.js" afterPath="$PROJECT_DIR$/prod/scripts/svg-sprite.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/svg-sprite.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/svg-sprite.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/transformicons.min.js" afterPath="$PROJECT_DIR$/prod/scripts/transformicons.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/transformicons.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/transformicons.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/vendor.min.js" afterPath="$PROJECT_DIR$/prod/scripts/vendor.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prod/scripts/vendor.min.js.map" afterPath="$PROJECT_DIR$/prod/scripts/vendor.min.js.map" />
     </list>
     <ignored path="MATRIX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +32,8 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1581">
-              <caret line="30" column="2" lean-forward="true" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+            <state relative-caret-position="170">
+              <caret line="128" column="8" lean-forward="false" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -65,9 +51,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>flex</find>
       <find>.no-js</find>
+      <find>flex</find>
     </findStrings>
+    <dirStrings>
+      <dir>E:\WWW\MATRIX\dev\style\blocks</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,12 +69,9 @@
         <option value="$PROJECT_DIR$/dev/scripts/svg-sprite.js" />
         <option value="$PROJECT_DIR$/dev/scripts/storage.js" />
         <option value="$PROJECT_DIR$/dev/scripts/flexie.js" />
-        <option value="$PROJECT_DIR$/dev/style/blocks/b-section6.less" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/prod/images/SVG.svg" />
-        <option value="$PROJECT_DIR$/dev/style/blocks/b-section4.less" />
         <option value="$PROJECT_DIR$/prod/scripts/myscripts.min.js" />
-        <option value="$PROJECT_DIR$/dev/style/blocks/b-section5.less" />
         <option value="$PROJECT_DIR$/dev/scripts/modernizr-config.json" />
         <option value="$PROJECT_DIR$/dev/style/blocks/browser-compatible.css" />
         <option value="$PROJECT_DIR$/dev/style/main.less" />
@@ -95,12 +81,10 @@
         <option value="$PROJECT_DIR$/dev/view/blocks/b-section4.html" />
         <option value="$PROJECT_DIR$/dev/view/blocks/b-section5.html" />
         <option value="$PROJECT_DIR$/dev/view/blocks/b-footer.html" />
-        <option value="$PROJECT_DIR$/dev/style/blocks/b-footer.less" />
         <option value="$PROJECT_DIR$/dev/style/variables_and_mixins.less" />
         <option value="$PROJECT_DIR$/dev/style/blocks/b-section1.less" />
         <option value="$PROJECT_DIR$/dev/view/blocks/b-section1.html" />
         <option value="$PROJECT_DIR$/dev/view/blocks/b-header.html" />
-        <option value="$PROJECT_DIR$/dev/style/blocks/b-header.less" />
         <option value="$PROJECT_DIR$/dev/style/blocks/b-section2.less" />
         <option value="$PROJECT_DIR$/dev/view/blocks/b-section2.html" />
         <option value="$PROJECT_DIR$/dev/style/blocks/b-section3.less" />
@@ -112,6 +96,11 @@
         <option value="$PROJECT_DIR$/dev/scripts/myscripts.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/prod/css/main.min.css" />
+        <option value="$PROJECT_DIR$/dev/style/blocks/b-header.less" />
+        <option value="$PROJECT_DIR$/dev/style/blocks/b-footer.less" />
+        <option value="$PROJECT_DIR$/dev/style/blocks/b-section4.less" />
+        <option value="$PROJECT_DIR$/dev/style/blocks/b-section5.less" />
+        <option value="$PROJECT_DIR$/dev/style/blocks/b-section6.less" />
       </list>
     </option>
   </component>
@@ -215,7 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,41 +249,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MATRIX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MATRIX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MATRIX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MATRIX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,20 +278,7 @@
       <recent name="E:\WWW\MATRIX\dev\scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gulp.js.default">
-    <configuration default="false" name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
-      <tasks>
-        <task>default</task>
-      </tasks>
-      <arguments>--production</arguments>
-      <envs>
-        <env name="--env" value="production" />
-      </envs>
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Gulp.js.gulp">
     <configuration default="false" name="styles" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -351,6 +295,17 @@
     <configuration default="false" name="gulpfile.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="gulpfile.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
+    <configuration default="false" name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>default</task>
+      </tasks>
+      <arguments>--production</arguments>
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -358,6 +313,12 @@
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
       <envs />
@@ -415,20 +376,20 @@
       <tasks>
         <task>default</task>
       </tasks>
-      <arguments />
+      <arguments>--production</arguments>
       <envs />
       <method />
     </configuration>
     <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Gulp.js.gulp" />
-      <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
-      <item index="2" class="java.lang.String" itemvalue="Gulp.js.styles" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.gulpfile.js" />
+      <item index="0" class="java.lang.String" itemvalue="Gulp.js.styles" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.gulpfile.js" />
+      <item index="2" class="java.lang.String" itemvalue="Gulp.js.default" />
+      <item index="3" class="java.lang.String" itemvalue="Gulp.js.gulp" />
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.styles" />
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.styles" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
         <item index="2" class="java.lang.String" itemvalue="Node.js.gulpfile.js" />
       </list>
     </recent_temporary>
@@ -464,12 +425,13 @@
       <workItem from="1483884377528" duration="1835000" />
       <workItem from="1484661716600" duration="605000" />
       <workItem from="1484663414132" duration="15855000" />
-      <workItem from="1489079079908" duration="1924000" />
+      <workItem from="1489079079908" duration="3133000" />
+      <workItem from="1489155070987" duration="995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226707000" />
+    <option name="totallyTimeSpent" value="228911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,13 +446,14 @@
     <frame x="58" y="-4" width="1386" height="908" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2247605" sideWeight="0.3486974" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2247605" sideWeight="0.6513026" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30140015" sideWeight="0.3550864" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30140015" sideWeight="0.6449136" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996207" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996207" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31226295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27686474" sideWeight="0.5025792" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36915296" sideWeight="0.4974208" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34134007" sideWeight="0.4974208" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3211125" sideWeight="0.35849056" order="10" side_tool="false" content_ui="tabs" x="40" y="159" width="1404" height="562" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -500,7 +463,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31226295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -564,13 +526,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/style/browser-compatible.css" />
-    <entry file="file://$PROJECT_DIR$/dev/style/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev/style/sprite.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -589,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/style/browser-combatibile.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -629,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/style/variables_and_mixins.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev/view/blocks/b-section1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -654,20 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-footer.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="162" column="8" lean-forward="false" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-header.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="131" column="24" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -696,20 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-section4.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-section5.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -759,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1130">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="100" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,15 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1075">
           <caret line="101" column="45" lean-forward="true" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-section6.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,14 +729,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/style/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prod/css/main.min.css">
+    <entry file="file://$PROJECT_DIR$/dev/style/variables_and_mixins.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="1" column="40" lean-forward="true" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        <state relative-caret-position="459">
+          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/style/browser-combatibile.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-section4.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-section5.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-footer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-section6.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/style/blocks/b-header.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="198" column="23" lean-forward="false" selection-start-line="198" selection-start-column="19" selection-end-line="198" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -851,10 +804,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prod/css/main.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1581">
-          <caret line="30" column="2" lean-forward="true" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+        <state relative-caret-position="170">
+          <caret line="128" column="8" lean-forward="false" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
           <folding />
         </state>
       </provider>
