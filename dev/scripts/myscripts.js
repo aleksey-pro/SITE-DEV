@@ -24,7 +24,7 @@ $(document).ready(function() {
 // transformicons init	
   transformicons.add('.tcon');
   $('.tcon-search--xcross').click(function () {
-    $('.b-header-element__input').toggle('slow');
+    $('.b-header-elements__input').toggle('slow');
   });
 
 // fullpage init

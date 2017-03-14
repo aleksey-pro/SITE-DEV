@@ -19,10 +19,10 @@ html.fp-enabled,
     position: relative;
 
     /* Touch detection for Windows 8 */
-    -ms-touch-action: none;
+
 
     /* IE 11 on Windows Phone 8.1*/
-    touch-action: none;
+
 }
 .fp-section {
     position: relative;

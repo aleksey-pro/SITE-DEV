@@ -120,6 +120,10 @@
   color: @brand-color;
 }
 
+#menu li:first-child.active a {
+  color: @text-color-white;
+}
+
 #menu li a {
   font-size: 1rem;
   color: @text-color-white;
@@ -129,6 +133,10 @@
   &:hover {
     color: @brand-color;
     transition: color 1s linear;
+  }
+
+  & li:hover:first-child a{
+    color: @text-color-white;
   }
 }
 
@@ -191,9 +199,6 @@
 /* searchButton-style */
 
 .tcon {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   border: none;
   cursor: pointer;
   display: -webkit-flex;
@@ -207,10 +212,6 @@
   align-items: center;
   height: 40px;
   transition: 0.3s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   width: 40px;
   background: transparent;
   outline: none;
