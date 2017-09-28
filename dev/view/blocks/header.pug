@@ -1,0 +1,38 @@
+header.header
+
+  a.header__logo(href="/")
+    img.header__logo-image(src='images/logo_154x73.svg' alt='site-dev')
+    span.header__logo-text sitedev.spb.ru
+
+  ul.header__menu.nav#menu
+    mixin nav-mixin(name, href, data)
+      li(class="nav__item inline" data-menuanchor=data)
+        a.nav__link(href=href)= name
+    +nav-mixin('главная', "#main", 'main-page')
+    +nav-mixin('работы', "#works", 'works-page')
+    +nav-mixin('стоимость', "#price", 'price-page')
+    +nav-mixin('технологии', "#tech", 'tech-page')
+    +nav-mixin('заказать', "#order", 'order-page')
+
+  .header__menu-mobile
+    .hamburger#hamburger-9
+      span.line
+      span.line
+      span.line
+
+    ul.header__dropdown-menu.nav-dropdown
+      +nav-mixin('главная', "#main", 'main-page')
+      +nav-mixin('работы', "#works", 'works-page')
+      +nav-mixin('стоимость', "#price", 'price-page')
+      +nav-mixin('технологии', "#tech", 'tech-page')
+      +nav-mixin('заказать', "#order", 'order-page')
+
+  .header__btns
+      a(href="viber://chat?number=+79522326240").phone
+        svg(width='30px' height='30px').contacts__ico.contacts__ico--viber
+          use(xlink:href='images/SVG.svg#viber')
+      a(href="skype:anxieter").skype
+        svg(width='30px' height='30px').header__btns-ico
+          use(xlink:href='images/SVG.svg#skype')
+
+

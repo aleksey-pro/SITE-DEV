@@ -1,0 +1,76 @@
+.price
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#63848c+38,17758f+100 */
+  background: rgb(99,132,140); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(99,132,140,1) 38%, rgba(23,117,143,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(99,132,140,1) 38%,rgba(23,117,143,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(99,132,140,1) 38%,rgba(23,117,143,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63848c', endColorstr='#17758f',GradientType=0 ); /* IE6-9 */
+
+
+
+
+.price-table
+  display: flex
+  flex-direction: row
+  justify-content: center
+  @include phones
+    flex-direction: column
+
+
+.price-table__nav
+  display: flex
+  flex-basis: 300px
+  flex-direction: column
+  .active
+    opacity: 1
+  @include phones
+    flex-direction: row
+    flex-basis: auto
+
+.price-table__item
+  flex: 1 0 200px
+  display: flex
+  cursor: pointer
+  align-items: center
+  background-color: white
+  opacity: 0.3
+  overflow: hidden
+  margin: 1em
+  padding: 1em
+  @include phones
+    padding: 0.5em
+    margin: 0
+    flex: 1 0 50px
+  &:first-child
+    @include phones
+      flex: 2 1 50px
+
+.price-table__title
+  font-size: 2em
+  p
+    margin: 0
+  svg
+    fill: $text-color
+  @media all and (max-width: 816px)
+    font-size: 1.2em
+  @include phones
+    font-size: 1em
+
+.price-table__list
+  @include cleanUlList()
+  .price-table__inner-list
+    margin-top: 20px
+  li
+    margin-bottom: 20px
+
+.price-table__list, .price-table__inner-list
+  span
+    color: darken($text-color, 10%)
+    font-weight: bold
+
+.price-table__contents
+  padding-left: 2em
+  color: $white
+  flex-basis: 600px
+  @include phones
+    padding: 0 5px

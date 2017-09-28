@@ -1,12 +1,12 @@
 {
-  "name": "matrix",
-  "description": "matrix site",
+  "name": "site-dev",
+  "description": "site-dev project",
   "main": "index.html",
   "authors": [
     "davegahn"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "no",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,10 +15,10 @@
     "tests"
   ],
   "dependencies": {
+    "iscroll": "^5.2.0",
+    "fullpage.js": "^2.8.9",
     "normalize-css": "normalize.css#^4.2.0",
-    "fullpage.js": "^2.8.9"
-  },
-  "devDependencies": {
-    "isotope": "^3.0.1"
+    "jquery-nice-select": "^1.1.0",
+    "jquery-ui": "^1.12.1"
   }
 }

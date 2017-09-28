@@ -1,0 +1,119 @@
+.works
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#17758f+0,63848c+62 */
+  background: rgb(23,117,143); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(23,117,143,1) 0%, rgba(99,132,140,1) 62%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(23,117,143,1) 0%,rgba(99,132,140,1) 62%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(23,117,143,1) 0%,rgba(99,132,140,1) 62%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17758f', endColorstr='#63848c',GradientType=0 ); /* IE6-9 */
+
+
+.grid
+  position: relative
+  height: calc(100% - 50px)
+  width: 90%;
+  margin: 0 auto;
+
+#scrolling-wrapper
+  position: absolute
+  z-index: 10
+  bottom: 0
+  height: 100%
+  left: 0
+  width: 100%
+  overflow: hidden
+  display: flex
+  @media all and (min-width: 1300px)
+    justify-content: center
+  #scroller
+    position: absolute
+    z-index: 1
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    transform: translateZ(0)
+    user-select: none
+    padding-left: 50px
+    // @include phones
+    //    width: 2000px
+
+.iScrollHorizontalScrollbar
+  left: 0 !important
+  right: 0 !important
+  &:before
+    content: ''
+    background: $brand-orange
+    width: 100%
+    height: 2px
+    position: absolute
+    top: 50%
+    margin-top: -1px
+
+
+.iScrollIndicator
+  background: $brand-orange !important
+  border: 1px solid $brand-orange !important
+
+
+.grid__item
+  position: relative
+  display: block
+  float: left
+  height: 400px
+  width: 360px
+  overflow: hidden
+  margin: 5px
+  &--green
+    background-color: rgba(green, 0.2)
+  &--red
+    background-color: rgba(red, 0.2)
+  @include tablets
+    margin: 0
+  @include phones
+    max-width: 320px
+
+
+h2.grid__title
+  position: absolute
+  background-color: rgba($white, 0.7)
+  top: 30%
+  z-index: 2
+  padding-left: 1em
+  width: 50%
+  padding: 1em
+
+.grid__link
+  position: absolute
+  bottom: 5%
+  z-index: 2
+  right: 0
+  background-color: rgba($white, 0.7)
+  display: table
+  padding: 5px
+  color: inherit
+  svg
+    display: inline-block
+    vertical-align: middle
+    fill: $text-color
+
+.grid__linkname
+  display: inline-block
+  vertical-align: middle
+  text-decoration: underline
+  margin-right: 5px
+
+
+.grid__image img
+  display: block
+  position: absolute
+  top: 3em
+  right: 0.5em
+  border-radius: 5px 0 0 0
+  z-index: 1
+
+.drag-popup-icon
+  display: none
+  svg
+    fill: $white
+  @media all and (max-width: 1300px)
+    display: block
+    position: absolute
+    left: 0
+    bottom: 20px

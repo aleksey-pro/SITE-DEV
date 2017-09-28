@@ -1,0 +1,23 @@
+section.section.works#works
+  .works-gallery.grid
+    .drag-popup-icon
+      svg(width='40px' height='40px')
+        use(xlink:href='images/SVG.svg#drag')
+    #scrolling-wrapper
+      #scroller
+        mixin gridItem(title, src, cls, href)
+          .grid__item(class=`grid__item--${cls}`)
+              h2.grid__title= title
+              a(href=href).grid__link
+                h3.grid__linkname Просмотр
+                svg(width='20px' height='20px')
+                  use(xlink:href='images/SVG.svg#link')
+              .grid__image
+                img(data-src=src width="320px" height="400px")
+        +gridItem('Сайт строительной компании', 'images/work-prestige.jpg', 'green', '#')
+        +gridItem('Сайт медицинского центра', 'images/work-baby.jpg', 'red', '#')
+        +gridItem('Item3', '#', 'green', '#')
+        +gridItem('Item4', '#', 'red', '#')
+        +gridItem('Item3', '#', 'green', '#')
+        +gridItem('Item4', '#', 'red', '#')
+

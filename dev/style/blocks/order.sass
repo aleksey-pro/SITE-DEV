@@ -1,0 +1,97 @@
+.order
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#63848c+38,ffffff+100 */
+  background: rgb(99,132,140); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(99,132,140,1) 38%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(99,132,140,1) 38%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(99,132,140,1) 38%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63848c', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+  overflow: hidden
+  padding: 0 5px
+
+.order__flex
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  height: 80%
+  justify-content: space-evenly
+  @include phones
+    height: 100%
+
+
+
+.order-form
+  display: flex
+  flex-direction: column
+  flex-basis: 320px
+  font-size: 1.2em
+  textarea, input, .nice-select
+    margin: 5px
+  label
+    display: inline
+
+
+.contacts
+  padding: 20px
+  @include phones
+    padding: 0
+
+.contacts__item
+  display: table
+  font-size: 1.5em
+  margin: 1em 0
+  color: darken($text-color, 10%)
+  transition: color 0.5s
+
+  @include phones
+    font-size: 1em
+
+  .contacts__ico
+    fill: #ffffff
+    vertical-align: middle
+  span
+    margin-left: 15px
+    vertical-align: middle
+    color: inherit
+
+
+.contacts__item:hover
+  color: #ffffff
+  .contacts__ico
+    fill: darken($text-color, 10%)
+
+
+
+input[type='number'], input[type='submit']
+  width: 5em
+
+textarea, input(not:input[type="file"])
+  background-color: #fff
+  border-radius: 5px
+  border: solid 1px #e8e8e8
+  box-sizing: border-box
+  font-size: 14px
+  font-weight: normal
+  height: 32px
+  line-height: 30px
+  outline: none
+  padding-left: 18px
+  position: relative
+  text-align: left !important
+
+
+
+input[type="file"]
+  border: 1px solid white
+  border-radius: 5px
+  font-size: 0.8em
+  cursor: pointer
+
+.order-form-send
+  display: inline-block
+  font-size: 1.2em
+  color: $text-color
+  padding: 5px 10px
+  background: $white
+  align-self: left
+  margin: 2px

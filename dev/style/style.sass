@@ -1,0 +1,39 @@
+/* colors */
+
+$white: #ffffff
+$text-color: #5e5d5d
+$brand-blue: #17758F
+$brand-orange: #E5861B
+
+// @import 'sprite'
+@import 'mixins'
+
+/* fonts */
+
+$base-font: 16px
+@import url("https://fonts.googleapis.com/css?family=Jura|PT+Sans")
+@font-face
+    font-family: "Russo One";
+    src: url("../fonts/RussoOne.ttf") format("truetype")
+
+body
+  font-family: 'PT Sans', sans-serif
+  font-size: $base-font
+  color: $text-color
+
+h1
+  font-family: 'Russo One', sans-serif
+  font-weight: normal
+
+a
+  text-decoration: none
+  color: $white
+
+
+/* pages */
+@import 'blocks/header'
+@import 'blocks/main'
+@import 'blocks/works'
+@import 'blocks/price'
+@import 'blocks/tech'
+@import 'blocks/order'

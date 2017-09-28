@@ -1,0 +1,70 @@
+section.section.order#order
+  .order__flex
+    form(method="POST" enctype="multipart/form-data").order-form
+      h3.order__title Оставить заявку
+      label(for="name") Введите ваше имя*
+      input(type="text" name='name' id="name" required).order-form__input
+      span
+      label(for="pagn") Выберите ваш email*
+      input(type="email" name='email' id="email" required).order-form__input
+      label(for="type") Выберите тип сайта
+      select.small(name='type[]' id="type").order-form__input
+        option Простой сайт
+        option Лендинг
+        option Сайт-блог
+        option Корпоративный сайт
+        option Интернет-магазин
+      label(for="verstka") Выберите тип верстки
+      select.small(name='verstka[]' id="verstka").order-form__input
+        option На основе ваших исходников и(или) ТЗ
+        option Верстка шаблона для CMS
+        option Сайт под ключ
+      label(for="adaptive") Нужна ли адаптивность
+      select.small(name='adaptive[]' id="adaptive").order-form__input
+        option Фиксированная
+        option Адаптивная
+      label(for="pagn") Выберите число страниц
+      input(type="number" name='pagn' id="pagn").order-form__input
+      label(for="ishodn") Наличие у вас исходников
+        input(type="hidden" name="ishodn" value="0")
+        input(type="checkbox" name='ishodn' id="ishodn" value="1").order-form__input
+      label(for="tz") Наличие технического задания
+        input(type="hidden" name="tz" value="0")
+        input(type="checkbox" name='tz' id="tz" value="1").order-form__input
+      label(for="comment") Ваши комментарии
+      textarea(name="comment" id="comment" rows="2")
+      //- input(type="file" name="sendfile" id="sendfile" enctype="multipart/form-data" multiple)
+      input(name="userfile[]" type="file" id="sendfile" multiple accept="application/pdf")
+      a(href="#" id="send-btn").order-form-send Отправить
+      span
+
+
+    .contacts
+      h2 Контакты
+      p веб-мастер. Алексей Исаев
+
+      a(href="whatsapp://send?phone=+79522326240").contacts__item
+        svg(width='30px' height='30px').contacts__ico.contacts__ico--whatsapp
+          use(xlink:href='images/SVG.svg#whatsapp')
+        span.contacts__name WhatsApp: +7-9522326240
+
+
+      a(href="viber://chat?number=+79522326240").contacts__item
+        svg(width='30px' height='30px').contacts__ico.contacts__ico--viber
+          use(xlink:href='images/SVG.svg#viber')
+        span.contacts__name Viber: +7-9522326240
+
+
+      a(href="skype:anxieter").contacts__item
+        svg(width='30px' height='30px').contacts__ico.contacts__ico--skype
+          use(xlink:href='images/SVG.svg#skype')
+        span.contacts__name Skype: anxieter
+
+
+
+      a(href="mailto:anxieter@yandex.ru").contacts__item
+        svg(width='30px' height='30px').contacts__ico.contacts__ico--mail
+          use(xlink:href='images/SVG.svg#mail')
+        span.contacts__name anxieter@yandex.ru
+
+

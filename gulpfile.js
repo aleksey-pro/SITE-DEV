@@ -22,13 +22,13 @@ var gulp = require('gulp'),
 	spritesmith = require('gulp.spritesmith'),
 	cheerio = require('gulp-cheerio'),
   modernizr = require('gulp-modernizr'),
+  pug = require('gulp-pug'),
+  sass = require('gulp-sass'),
+  del  = require('del'),
+  svgSprite = require('gulp-svg-sprite'),
+  autoprefixer = require('gulp-autoprefixer'),
 	argv = require('yargs').argv;
 
-  // lessImport = require('gulp-less-import'),
-	
-var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({ browsers: ['>1%'] });
-	
 var config = {
   server: {
     baseDir: 'prod'
@@ -45,115 +45,94 @@ gulp.task ('browserSync', function(){
 });
 
 gulp.task('images', function() {
-	return gulp.src('dev/images/*.jpg')
-	.pipe(imagemin())
+	return gulp.src('dev/images/*.*')
+  .pipe(imagemin())
 	.pipe(gulp.dest('prod/images'))
 	.pipe(browserSync.reload({stream: true}))
 });
+
+gulp.task('favicons', function() {
+  return gulp.src('dev/images/favicons/*.*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('prod/images/favicons/'))
+  .pipe(browserSync.reload({stream: true}))
+});
+
 
 gulp.task('sprite', function() {
 	var spriteData =
-		gulp.src('dev/images/sprite/*')
+		gulp.src('dev/images/sprites/*.png')
 			.pipe(spritesmith({
 				imgName: 'sprite.png',
-				cssName: 'sprite.css'
+				cssName: 'sprite.scss'
 			}));
-	spriteData.img.pipe(gulp.dest('prod/images/')); 
+	spriteData.img.pipe(gulp.dest('prod/images/'));
 	spriteData.css.pipe(gulp.dest('dev/style/'));
 });
 
-gulp.task('SVG', function() {
-	return gulp.src('dev/images/SVG/*.svg')
-  .pipe (cheerio({
-      run: function ($) {
-        $('[fill]').removeAttr('fill');
-        $('path').attr('style', 'fill:currentColor').html();
-        $('svg').attr('style',  'display:none');
-      },
-      parserOptions: { xmlMode: true }
-    }))
-	.pipe(svgmin(
-		{
-			js2svg: {
+gulp.task('svg-sprite', function() {
+  return gulp.src('dev/images/sprites/*.svg')
+    .pipe(svgmin({
+      js2svg: {
         pretty: true
       }
-		},
-    {plugins: [{convertShapeToPath: false, removeViewBox: true}]},
-		function getOptions (file) {
-			var prefix = path.basename(file.relative, path.extname(file.relative));
-			return {
-				plugins: [
-					{cleanupIDs: {
-						prefix: prefix + '-',
-						minify: true
-						}
-					}
-				]
-			}
-		}
-	))
-	.pipe(svgstore({inlineSvg: true}))
-	.pipe(gulp.dest('prod/images'))
-	.pipe(browserSync.reload({stream: true}))
-});
+    }))
+    .pipe(cheerio({
+      //run: function ($) {
+        // $('[fill]').removeAttr('fill');
+        // $('[stroke]').removeAttr('stroke');
+        // $('[style]').removeAttr('style');
+      //},
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: '../SVG.svg'
+        }
+      }
+    }))
+    .pipe(gulp.dest('prod/images/'));
+  })
 
 gulp.task('fonts', function() {
 	return gulp.src('dev/fonts/**/*')
 	.pipe(gulp.dest('prod/fonts'))
-	.pipe(browserSync.reload({stream: true}))	
-});
-
-gulp.task('HTML', function() {
-  return gulp.src('dev/view/index.html')
-	.pipe(fileinclude())
-	.on('error', console.log)
-	.pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
-	.pipe(gulp.dest('prod'))
 	.pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('fileinclude', function() {
-  return gulp.src('dev/view/blocks/*.html')
-	.pipe(fileinclude())	
-});
 
-gulp.task('styles', function () {
-  return gulp.src('dev/style/main.less')
-    .pipe(sourcemaps.init())
-    .pipe(plumber({
-      errorHandler: notify.onError(function(err){
-        return {
-          title: 'Styles',
-          message: err.message
-        };
-      })
+gulp.task('view', function() {
+  return gulp.src('dev/view/index.pug')
+    .pipe(pug({
+      pretty: true
     }))
-    //	.pipe(csscomb())
-    // .pipe(lessImport('main.less'))
-    .pipe(less({
-      plugins: [autoprefix],
-      paths: ['dev/style/**'],
-      filename: 'main.less'
-    }))
-    .pipe(gulpif(argv.production, minifyCSS()))
-    .pipe(rename({suffix: '.min'}))
-    // .pipe(uncss({html: ['dev/view/*.html']})) doesn't work correctly
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('prod/css'))
+    .on('error', notify.onError(function(error) {
+      return {
+        title: 'Pug',
+        message:  error.message
+      }
+     }))
+    .pipe(gulpif(argv.production, htmlmin({collapseWhitespace: true, removeComments: true})))
+    .pipe(gulp.dest('prod/'))
     .pipe(browserSync.reload({stream: true}))
 });
 
-
-gulp.task('bowerjs', function(){
-	return gulp.src(mainBowerFiles({base: 'bower_components', filter: '**/*.js'}))
-		 .pipe(sourcemaps.init())
-		 .pipe(concat('vendor.js'))
-		 .pipe(gulpif(argv.production, uglify()))
-		 .pipe(rename({suffix: '.min'}))
-		 .pipe(sourcemaps.write('.'))
-		 .pipe(gulp.dest('prod/scripts'))
-		 .pipe(browserSync.reload({stream: true}))
+gulp.task('sass', function() {
+  return gulp.src('dev/style/style.sass')
+  	.pipe(sourcemaps.init())
+    .pipe(sass({
+      includePaths: 'dev/style/**/*.sass',
+      outputStyle: 'expanded'
+    })).on('error', sass.logError)
+    .pipe(autoprefixer({browsers: ['last 5 versions']}))
+    .pipe(gulpif(argv.production, minifyCSS()))
+    // .pipe(gulpif(argv.production, rename({suffix: '.min'})))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('prod/css/'))
+    .pipe(browserSync.reload({stream: true}))
 });
+
 
 gulp.task('bowercss', function(){
 	return gulp.src(mainBowerFiles({base: 'bower_components', filter: '**/*.css'}))
@@ -161,9 +140,20 @@ gulp.task('bowercss', function(){
 //		 .pipe(uncss({html: ['dev/view/*.html']}))
 		 .pipe(concat('vendor.css'))
 		 .pipe(gulpif(argv.production, minifyCSS()))
-		 .pipe(rename({suffix: '.min'}))
+		 // .pipe(gulpif(argv.production, rename({suffix: '.min'})))
 		 .pipe(sourcemaps.write('.'))
 		 .pipe(gulp.dest('prod/css'))
+		 .pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('bowerjs', function(){
+	return gulp.src(mainBowerFiles({base: 'bower_components', filter: '**/*.js'}))
+		 .pipe(sourcemaps.init())
+		 .pipe(concat('vendor.js'))
+		 .pipe(gulpif(argv.production, uglify()))
+		 // .pipe(gulpif(argv.production, rename({suffix: '.min'})))
+		 .pipe(sourcemaps.write('.'))
+		 .pipe(gulp.dest('prod/scripts'))
 		 .pipe(browserSync.reload({stream: true}))
 });
 
@@ -172,12 +162,11 @@ gulp.task('scripts', function () {
 	return gulp.src(['dev/scripts/*.js', '!dev/scripts/modernizr-custom.js'])
      .pipe(sourcemaps.init())
 		 .pipe(gulpif(argv.production, uglify()))
-		 .pipe(rename({suffix: '.min'}))		 
 		 .pipe(sourcemaps.write('.'))
 		 .pipe(gulp.dest('prod/scripts'))
 		 .pipe(browserSync.reload({stream: true}))
 });
-	
+
 
 gulp.task('jshint', function() {
     return gulp.src('dev/scripts/*.js')
@@ -192,17 +181,15 @@ gulp.task('modernizr', function() {
    .pipe(rename({suffix: '.min'}))
    .pipe(gulp.dest("prod/scripts/"))
 });
-	
+
 gulp.task ('watch', function(){
-	gulp.watch('dev/view/**/*.html', ['HTML']);
-	gulp.watch('dev/images/*', ['images']);
-	gulp.watch('dev/fonts/**/*', ['fonts']);	
-	gulp.watch('dev/style/**/*.less', ['styles']);
+	gulp.watch('dev/view/**/*.pug', ['view']);
+	gulp.watch('dev/style/**/*.sass', ['sass']);
 	gulp.watch('dev/scripts/*.js', ['scripts']);
-	gulp.watch('bower_components/**/*', ['bowerjs'], ['bowercss']);
+	// gulp.watch('bower_components/**/*', ['bowerjs'], ['bowercss']);
 });
 
-gulp.task ('default', ['modernizr', 'scripts', 'sprite', 'fonts', 'bowerjs', 'bowercss', 'styles', 'HTML', 'browserSync', 'jshint', 'watch']);
+gulp.task ('default', ['view', 'scripts', 'sass', 'browserSync', 'watch', 'jshint']);
+gulp.task ('build', ['view', 'scripts', 'images', 'favicons', 'fonts', 'bowerjs', 'bowercss', 'sass', 'sprite', 'svg-sprite']);
+gulp.task('del', function() {return del.sync('prod'); });
 
-//  'gulp-inject' ,'images'
-// http://geekswithblogs.net/shaunxu/archive/2015/02/17/10-awesome-gulp-plugins-working-with-angularjs-and-bower.aspx
