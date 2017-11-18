@@ -19,7 +19,7 @@ var myScroll;
 function adjustCardsContainer(){
   var workCardWidth = $('.grid__item').width();
   var workCardQnty = $('.grid__item').length;
-  var sw = (window.matchMedia("(max-width: 460px)").matches) ? workCardWidth * workCardQnty + 100 : (workCardWidth * (workCardQnty / 2) + 100);
+  var sw = (window.matchMedia("(max-height: 800px)").matches) ? workCardWidth * workCardQnty + 100 : (workCardWidth * (workCardQnty / 2) + 100);
   $('#scroller').css('width', sw + "px");
 }
 
@@ -29,7 +29,7 @@ $(window).resize(function(){
   adjustCardsContainer();
 });
 
-
+//оризонтальный скроллл секции работ
 
 function horScroll() {
   myScroll = new IScroll('#scrolling-wrapper', {
@@ -69,6 +69,8 @@ horScroll();
     responsiveWidth: 768,
     onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
       var leavingSlide = $(this);
+
+      //настройка слайдера
 
       function fade(slide){
         setTimeout(function() {
@@ -157,10 +159,18 @@ $('.nav__link').on('click', function(){
     var dataTab = $(this).data('tab');
     $getWrapper = $(this).closest($wrapper);
     $getWrapper.find($tabMenu).removeClass('active');
+    $(this).removeClass('hovered');
     $(this).addClass('active');
     $getWrapper.find($allTabs).hide();
     $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').show();
   })
+
+  $tabMenu.on('mouseenter mouseleave',
+    function(){
+      if(!$(this).hasClass('active')){
+        $(this).toggleClass('hovered');
+      }
+    });
 
 // mailsend
 

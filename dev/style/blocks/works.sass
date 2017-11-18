@@ -31,8 +31,12 @@
     transform: translateZ(0)
     user-select: none
     padding-left: 50px
-    // @include phones
-    //    width: 2000px
+
+
+// #scroller  
+//   @media all and (max-height: 768px)
+//     width: 3180px
+//     height: 100%
 
 .iScrollHorizontalScrollbar
   left: 0 !important
@@ -56,19 +60,21 @@
   position: relative
   display: block
   float: left
-  height: 400px
-  width: 360px
+  height: 360px
+  width: 320px
   overflow: hidden
   margin: 5px
   &--green
     background-color: rgba(green, 0.2)
   &--red
     background-color: rgba(red, 0.2)
-  @include tablets
-    margin: 0
   @include phones
     max-width: 320px
+    
 
+.grid__item 
+  @media all and (max-height: 800px) and (min-height: 600px)
+    margin-top: 100px
 
 h2.grid__title
   position: absolute
@@ -84,14 +90,18 @@ h2.grid__title
   bottom: 5%
   z-index: 2
   right: 0
-  background-color: rgba($white, 0.7)
+  background-color: rgba(#000, 0.6)
   display: table
   padding: 5px
-  color: inherit
+  color: $brand-orange
   svg
     display: inline-block
     vertical-align: middle
-    fill: $text-color
+    fill: $brand-orange
+
+.grid__link
+   @media all and (max-height: 480px)
+     top: 5%  
 
 .grid__linkname
   display: inline-block
@@ -103,8 +113,8 @@ h2.grid__title
 .grid__image img
   display: block
   position: absolute
-  top: 3em
-  right: 0.5em
+  top: 2em
+  right: 1em
   border-radius: 5px 0 0 0
   z-index: 1
 

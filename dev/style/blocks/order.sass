@@ -13,7 +13,6 @@
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  height: 80%
   justify-content: space-evenly
   @include phones
     height: 100%
@@ -25,11 +24,19 @@
   flex-direction: column
   flex-basis: 320px
   font-size: 1.2em
-  textarea, input, .nice-select
-    margin: 5px
+  input, textarea
+    font-size: 12px
+    line-height: 30px
+    border-radius: 5px
+    color: $text-color   
+  textarea, input[type="text"],input[type="email"], .nice-select 
+     margin: 3px
+     padding-left: 18px
+     padding-right: 30px 
+  input[type="number"]
+    padding-left: 18px
   label
     display: inline
-
 
 .contacts
   padding: 20px

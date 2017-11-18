@@ -28,7 +28,7 @@
     flex-basis: auto
 
 .price-table__item
-  flex: 1 0 200px
+  flex: 1 0 160px
   display: flex
   cursor: pointer
   align-items: center
@@ -36,14 +36,18 @@
   opacity: 0.3
   overflow: hidden
   margin: 1em
-  padding: 1em
+  padding: 1em 
+  transition: all 0.2s ease-in-out
   @include phones
     padding: 0.5em
     margin: 0
     flex: 1 0 50px
   &:first-child
     @include phones
-      flex: 2 1 50px
+      flex: 2 1 50px   
+
+.price-table__item.hovered 
+  opacity: 0.5
 
 .price-table__title
   font-size: 2em
