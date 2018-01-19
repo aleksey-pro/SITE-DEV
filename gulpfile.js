@@ -189,7 +189,7 @@ gulp.task ('watch', function(){
 	// gulp.watch('bower_components/**/*', ['bowerjs'], ['bowercss']);
 });
 
-gulp.task ('default', ['view', 'scripts', 'sass', 'browserSync', 'watch', 'jshint']);
+gulp.task ('default', ['view', 'bowerjs', 'bowercss', 'scripts', 'sass', 'browserSync', 'watch', 'jshint']);
 gulp.task ('build', ['view', 'scripts', 'images', 'favicons', 'fonts', 'bowerjs', 'bowercss', 'sass', 'sprite', 'svg-sprite']);
 gulp.task('del', function() {return del.sync('prod'); });
 

@@ -311,6 +311,12 @@ a {
   }
 }
 
+@media all and (max-width: 767px) {
+  .fullpage-wrapper {
+    overflow: hidden;
+  }
+}
+
 .works {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#17758f+0,63848c+62 */
   background: #17758f;
@@ -335,12 +341,8 @@ a {
   z-index: 10;
   bottom: 0;
   height: 100%;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  left: 10%;
+  width: 80%;
 }
 
 @media all and (min-width: 1300px) {
@@ -362,6 +364,7 @@ a {
       -ms-user-select: none;
           user-select: none;
   padding-left: 50px;
+  height: 90%;
 }
 
 .iScrollHorizontalScrollbar {
@@ -388,7 +391,7 @@ a {
   position: relative;
   display: block;
   float: left;
-  height: 400px;
+  height: 50%;
   width: 360px;
   overflow: hidden;
   margin: 5px;
@@ -400,12 +403,6 @@ a {
 
 .grid__item--red {
   background-color: rgba(255, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 768px) {
-  .grid__item {
-    margin: 0;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -621,9 +618,10 @@ h2.grid__title {
   margin-bottom: 20px;
 }
 
-.price-table__list span, .price-table__inner-list span {
+.price-table__list div, .price-table__inner-list div {
   color: #444444;
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .price-table__contents {
@@ -720,10 +718,10 @@ h2.grid__title {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  height: 80%;
-  -webkit-justify-content: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  height: 90%;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 
 @media screen and (max-width: 480px) {
@@ -796,18 +794,18 @@ h2.grid__title {
   fill: #444444;
 }
 
-input[type='number'], input[type='submit'] {
+input[type='number'] {
   width: 5em;
 }
 
-textarea, input(not:input[type="file"]) {
+textarea, .custom-input {
   background-color: #fff;
   border-radius: 5px;
   border: solid 1px #e8e8e8;
   box-sizing: border-box;
   font-size: 14px;
   font-weight: normal;
-  height: 32px;
+  min-height: 32px;
   line-height: 30px;
   outline: none;
   padding-left: 18px;
@@ -822,17 +820,12 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.order-form-send {
-  display: inline-block;
-  font-size: 1.2em;
-  color: #5e5d5d;
-  padding: 5px 10px;
-  background: #ffffff;
-  -webkit-align-self: left;
-      -ms-flex-item-align: left;
-              -ms-grid-row-align: left;
-          align-self: left;
-  margin: 2px;
+input[type='submit'] {
+  min-height: 32px;
+}
+
+.info {
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

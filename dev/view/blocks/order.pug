@@ -1,12 +1,12 @@
 section.section.order#order
   .order__flex
-    form(method="POST" enctype="multipart/form-data").order-form
+    form(method="post" enctype="multipart/form-data")#form.order-form
       h3.order__title Оставить заявку
       label(for="name") Введите ваше имя*
-      input(type="text" name='name' id="name" required).order-form__input
+      input(type="text" name='name' id="name" required).order-form__input.custom-input
       span
       label(for="pagn") Выберите ваш email*
-      input(type="email" name='email' id="email" required).order-form__input
+      input(type="email" name='email' id="email" required).order-form__input.custom-input
       label(for="type") Выберите тип сайта
       select.small(name='type[]' id="type").order-form__input
         option Простой сайт
@@ -24,7 +24,7 @@ section.section.order#order
         option Фиксированная
         option Адаптивная
       label(for="pagn") Выберите число страниц
-      input(type="number" name='pagn' id="pagn").order-form__input
+      input(type="number" name='pagn' id="pagn").order-form__input.custom-input
       label(for="ishodn") Наличие у вас исходников
         input(type="hidden" name="ishodn" value="0")
         input(type="checkbox" name='ishodn' id="ishodn" value="1").order-form__input
@@ -32,11 +32,10 @@ section.section.order#order
         input(type="hidden" name="tz" value="0")
         input(type="checkbox" name='tz' id="tz" value="1").order-form__input
       label(for="comment") Ваши комментарии
-      textarea(name="comment" id="comment" rows="2")
-      //- input(type="file" name="sendfile" id="sendfile" enctype="multipart/form-data" multiple)
-      input(name="userfile[]" type="file" id="sendfile" multiple accept="application/pdf")
-      a(href="#" id="send-btn").order-form-send Отправить
-      span
+      textarea(name="comment" id="comment" columns="2")
+      input(type="file" name="userfile[]" multiple id="userfile" accept="application/*, image/*")
+      input(type="submit" value="Отправить")
+      span.info
 
 
     .contacts
@@ -65,6 +64,6 @@ section.section.order#order
       a(href="mailto:anxieter@yandex.ru").contacts__item
         svg(width='30px' height='30px').contacts__ico.contacts__ico--mail
           use(xlink:href='images/SVG.svg#mail')
-        span.contacts__name anxieter@yandex.ru
+        span.contacts__name mail@sitedev.spb.ru
 
 

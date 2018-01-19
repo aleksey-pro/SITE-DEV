@@ -19,6 +19,7 @@
     "fullpage.js": "^2.8.9",
     "normalize-css": "normalize.css#^4.2.0",
     "jquery-nice-select": "^1.1.0",
-    "jquery-ui": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "svg4everybody": "#2.1.9"
   }
 }

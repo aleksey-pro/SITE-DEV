@@ -10,18 +10,16 @@
 .grid
   position: relative
   height: calc(100% - 50px)
-  width: 90%;
-  margin: 0 auto;
+  width: 90%
+  margin: 0 auto
 
 #scrolling-wrapper
   position: absolute
   z-index: 10
   bottom: 0
   height: 100%
-  left: 0
-  width: 100%
-  overflow: hidden
-  display: flex
+  left: 10%
+  width: 80%
   @media all and (min-width: 1300px)
     justify-content: center
   #scroller
@@ -31,6 +29,7 @@
     transform: translateZ(0)
     user-select: none
     padding-left: 50px
+    height: 90%
     // @include phones
     //    width: 2000px
 
@@ -56,7 +55,7 @@
   position: relative
   display: block
   float: left
-  height: 400px
+  height: 50%
   width: 360px
   overflow: hidden
   margin: 5px
@@ -64,8 +63,6 @@
     background-color: rgba(green, 0.2)
   &--red
     background-color: rgba(red, 0.2)
-  @include tablets
-    margin: 0
   @include phones
     max-width: 320px
 

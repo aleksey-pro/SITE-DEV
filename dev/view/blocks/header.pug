@@ -5,14 +5,14 @@ header.header
     span.header__logo-text sitedev.spb.ru
 
   ul.header__menu.nav#menu
-    mixin nav-mixin(name, href, data)
+    mixin nav-mixin(name, data)
       li(class="nav__item inline" data-menuanchor=data)
-        a.nav__link(href=href)= name
-    +nav-mixin('главная', "#main", 'main-page')
-    +nav-mixin('работы', "#works", 'works-page')
-    +nav-mixin('стоимость', "#price", 'price-page')
-    +nav-mixin('технологии', "#tech", 'tech-page')
-    +nav-mixin('заказать', "#order", 'order-page')
+        a.nav__link(href=`#${data}`)= name
+    +nav-mixin('главная', 'mainPage')
+    +nav-mixin('работы', 'worksPage')
+    +nav-mixin('стоимость', 'pricePage')
+    +nav-mixin('технологии', 'techPage')
+    +nav-mixin('заказать', 'orderPage')
 
   .header__menu-mobile
     .hamburger#hamburger-9
@@ -21,11 +21,11 @@ header.header
       span.line
 
     ul.header__dropdown-menu.nav-dropdown
-      +nav-mixin('главная', "#main", 'main-page')
-      +nav-mixin('работы', "#works", 'works-page')
-      +nav-mixin('стоимость', "#price", 'price-page')
-      +nav-mixin('технологии', "#tech", 'tech-page')
-      +nav-mixin('заказать', "#order", 'order-page')
+      +nav-mixin('главная', 'mainPage')
+      +nav-mixin('работы', 'worksPage')
+      +nav-mixin('стоимость', 'pricePage')
+      +nav-mixin('технологии', 'techPage')
+      +nav-mixin('заказать', 'orderPage')
 
   .header__btns
       a(href="viber://chat?number=+79522326240").phone
