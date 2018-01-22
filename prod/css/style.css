@@ -395,6 +395,11 @@ a {
   width: 360px;
   overflow: hidden;
   margin: 5px;
+  transition: all 0.5s ease-in-out;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .grid__item--green {
@@ -409,6 +414,18 @@ a {
   .grid__item {
     max-width: 320px;
   }
+}
+
+.grid__item:hover {
+  border-color: #E5861B;
+}
+
+.grid__item:hover > a.grid__link {
+  color: #E5861B;
+}
+
+.grid__item:hover > a.grid__link > svg {
+  fill: #E5861B;
 }
 
 h2.grid__title {
@@ -430,12 +447,14 @@ h2.grid__title {
   display: table;
   padding: 5px;
   color: inherit;
+  transition: inherit;
 }
 
 .grid__link svg {
   display: inline-block;
   vertical-align: middle;
   fill: #5e5d5d;
+  transition: inherit;
 }
 
 .grid__linkname {
@@ -493,6 +512,7 @@ h2.grid__title {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 90%;
 }
 
 @media screen and (max-width: 480px) {
@@ -531,9 +551,9 @@ h2.grid__title {
 }
 
 .price-table__item {
-  -webkit-flex: 1 0 200px;
-      -ms-flex: 1 0 200px;
-          flex: 1 0 200px;
+  -webkit-flex: 1 0 100px;
+      -ms-flex: 1 0 100px;
+          flex: 1 0 100px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -590,6 +610,10 @@ h2.grid__title {
   }
 }
 
+.price-table__block p {
+  margin: 0;
+}
+
 .price-table__list {
   list-style-type: none;
   -webkit-margin-before: 0;
@@ -610,15 +634,12 @@ h2.grid__title {
   vertical-align: baseline;
 }
 
-.price-table__list .price-table__inner-list {
-  margin-top: 20px;
-}
-
 .price-table__list li {
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
-.price-table__list div, .price-table__inner-list div {
+.price-table__list span, .price-table__inner-list span {
   color: #444444;
   font-weight: bold;
   margin-top: 5px;
@@ -627,15 +648,19 @@ h2.grid__title {
 .price-table__contents {
   padding-left: 2em;
   color: #ffffff;
-  -webkit-flex-basis: 600px;
-      -ms-flex-preferred-size: 600px;
-          flex-basis: 600px;
+  -webkit-flex-basis: 800px;
+      -ms-flex-preferred-size: 800px;
+          flex-basis: 800px;
 }
 
 @media screen and (max-width: 480px) {
   .price-table__contents {
     padding: 0 5px;
   }
+}
+
+.underlined {
+  border-bottom: 1px dashed #5e5d5d;
 }
 
 .tech {

@@ -59,13 +59,23 @@
   width: 360px
   overflow: hidden
   margin: 5px
+  transition: all 0.5s ease-in-out
+  box-sizing: border-box
+  border-width: 2px
+  border-style: solid
+  border-color: transparent
   &--green
     background-color: rgba(green, 0.2)
   &--red
     background-color: rgba(red, 0.2)
   @include phones
     max-width: 320px
-
+  &:hover
+    border-color: $brand-orange
+  &:hover>a.grid__link
+    color: $brand-orange
+  &:hover>a.grid__link>svg
+    fill: $brand-orange
 
 h2.grid__title
   position: absolute
@@ -85,10 +95,12 @@ h2.grid__title
   display: table
   padding: 5px
   color: inherit
+  transition: inherit
   svg
     display: inline-block
     vertical-align: middle
     fill: $text-color
+    transition: inherit
 
 .grid__linkname
   display: inline-block
