@@ -1,7 +1,6 @@
 /* colors */
 /* breakpoints */
 /* mixins */
-@import url("https://fonts.googleapis.com/css?family=Jura|PT+Sans");
 .inline {
   display: inline;
 }
@@ -17,20 +16,34 @@
   src: url("../fonts/RussoOne.ttf") format("truetype");
 }
 
-body {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 16px;
-  color: #5e5d5d;
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro-Medium.ttf") format("truetype");
 }
 
-h1 {
-  font-family: 'Russo One', sans-serif;
-  font-weight: normal;
+/* main */
+body {
+  font-family: 'GothamPro', sans-serif;
+  font-size: 16px;
+  color: #5e5d5d;
 }
 
 a {
   text-decoration: none;
   color: #ffffff;
+}
+
+h1, h2 {
+  font-family: 'GothamPro', sans-serif;
+  font-size: 1.2rem !important;
+  margin: 0 !important;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  h1, h2 {
+    font-size: 1rem !important;
+  }
 }
 
 /* pages */
@@ -168,7 +181,7 @@ a {
   margin-left: 20px;
 }
 
-.phone svg, .skype svg {
+.phone svg {
   fill: #ffffff;
 }
 
@@ -520,6 +533,7 @@ h2.grid__title {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
   }
 }
 
@@ -547,6 +561,7 @@ h2.grid__title {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+    margin-bottom: 1em;
   }
 }
 
@@ -570,19 +585,12 @@ h2.grid__title {
 
 @media screen and (max-width: 480px) {
   .price-table__item {
-    padding: 0.5em;
+    padding: 0.2em;
     margin: 0;
     -webkit-flex: 1 0 50px;
         -ms-flex: 1 0 50px;
             flex: 1 0 50px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .price-table__item:first-child {
-    -webkit-flex: 2 1 50px;
-        -ms-flex: 2 1 50px;
-            flex: 2 1 50px;
+    text-align: center;
   }
 }
 
@@ -645,6 +653,12 @@ h2.grid__title {
   margin-top: 5px;
 }
 
+@media screen and (max-width: 480px) {
+  .price-table__list span, .price-table__inner-list span {
+    display: block;
+  }
+}
+
 .price-table__contents {
   padding-left: 2em;
   color: #ffffff;
@@ -661,6 +675,11 @@ h2.grid__title {
 
 .underlined {
   border-bottom: 1px dashed #5e5d5d;
+  transition: all 0.2s ease-in;
+}
+
+.underlined:hover {
+  color: #cccccc;
 }
 
 .tech {
@@ -769,7 +788,7 @@ h2.grid__title {
 }
 
 .order-form textarea, .order-form input, .order-form .nice-select {
-  margin: 5px;
+  margin: 5px 5px 5px 0;
 }
 
 .order-form label {

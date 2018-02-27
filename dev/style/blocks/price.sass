@@ -16,7 +16,7 @@
   height: 90%
   @include phones
     flex-direction: column
-
+    height: auto
 
 .price-table__nav
   display: flex
@@ -27,6 +27,7 @@
   @include phones
     flex-direction: row
     flex-basis: auto
+    margin-bottom: 1em
 
 .price-table__item
   flex: 1 0 100px
@@ -39,12 +40,10 @@
   margin: 1em
   padding: 1em
   @include phones
-    padding: 0.5em
+    padding: 0.2em
     margin: 0
     flex: 1 0 50px
-  &:first-child
-    @include phones
-      flex: 2 1 50px
+    text-align: center
 
 .price-table__title
   font-size: 2em
@@ -56,6 +55,7 @@
     font-size: 1.2em
   @include phones
     font-size: 1em
+
 
 
 .price-table__block p
@@ -73,6 +73,8 @@
     color: darken($text-color, 10%)
     font-weight: bold
     margin-top: 5px
+    @include phones
+      display: block
 
 .price-table__contents
   padding-left: 2em
@@ -83,4 +85,6 @@
 
 .underlined
   border-bottom: 1px dashed $text-color
-
+  transition: all 0.2s ease-in
+  &:hover
+    color: darken(#fff, 20%);

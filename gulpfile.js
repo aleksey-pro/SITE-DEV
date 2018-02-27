@@ -77,14 +77,14 @@ gulp.task('svg-sprite', function() {
         pretty: true
       }
     }))
-    .pipe(cheerio({
+    // .pipe(cheerio({
       //run: function ($) {
         // $('[fill]').removeAttr('fill');
         // $('[stroke]').removeAttr('stroke');
         // $('[style]').removeAttr('style');
       //},
-      parserOptions: { xmlMode: true }
-    }))
+      // parserOptions: { xmlMode: true }
+    // }))
     .pipe(svgSprite({
       mode: {
         symbol: {
