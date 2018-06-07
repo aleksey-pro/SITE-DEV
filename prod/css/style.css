@@ -556,6 +556,8 @@ h2.grid__title {
 
 .price-table__title p {
   margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
 }
 
 .price-table__title svg {
@@ -812,7 +814,7 @@ input[type="file"] {
   font-size: 1.2em;
   color: #5e5d5d;
   padding: 5px 10px;
-  background: #ffffff;
+  background: #dae1e3;
   -ms-flex-item-align: left;
       -ms-grid-row-align: left;
       align-self: left;
