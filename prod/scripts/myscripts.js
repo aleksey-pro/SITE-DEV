@@ -1,88 +1,86 @@
-
 $(document).ready(function() {
-
   svg4everybody();
 
-//active link on click
+  //active link on click
 
-  $('.nav__item').on('click', function(){
-    var list = $(this).closest('ul');
-    list.find('.nav__item').removeClass('active');
-    $(this).toggleClass('active');
+  $(".nav__item").on("click", function() {
+    var list = $(this).closest("ul");
+    list.find(".nav__item").removeClass("active");
+    $(this).toggleClass("active");
   });
 
-  $('.title1').css('display', 'block');
+  $(".title1").css("display", "block");
 
+  // works horizontal scrolling
 
-// works horizontal scrolling
+  var myScroll;
 
-var myScroll;
+  function adjustCardsContainer() {
+    var workCardWidth = $(".grid__item").width();
+    var workCardQnty = $(".grid__item").length;
+    // var sw = (window.matchMedia("(max-width: 460px)").matches) ? workCardWidth * workCardQnty + 100 : (workCardWidth * (workCardQnty / 2) + 100);
+    var sw = workCardWidth * (workCardQnty / 2) + 100;
+    $("#scroller").css("width", sw + "px");
+  }
 
-function adjustCardsContainer(){
-  var workCardWidth = $('.grid__item').width();
-  var workCardQnty = $('.grid__item').length;
-<<<<<<< HEAD
-  var sw = (window.matchMedia("(max-height: 800px)").matches) ? workCardWidth * workCardQnty + 100 : (workCardWidth * (workCardQnty / 2) + 100);
-=======
-  // var sw = (window.matchMedia("(max-width: 460px)").matches) ? workCardWidth * workCardQnty + 100 : (workCardWidth * (workCardQnty / 2) + 100);
-  var sw = workCardWidth * (workCardQnty / 2) + 100;
->>>>>>> 5f1d127ae334fb1e44845f644b3b41f95930b459
-  $('#scroller').css('width', sw + "px");
-}
-
-adjustCardsContainer();
-
-$(window).resize(function(){
   adjustCardsContainer();
-});
 
-//оризонтальный скроллл секции работ
-
-function horScroll() {
-  myScroll = new IScroll('#scrolling-wrapper', {
-    eventPassthrough: true,
-    scrollX: true,
-    scrollY: false,
-    scrollbars: true,
-    interactiveScrollbars: true,
-    mouseWheel: false,
-    keyBindings: true,
-    useTransition: false
+  $(window).resize(function() {
+    adjustCardsContainer();
   });
-};
 
-horScroll();
+  //оризонтальный скроллл секции работ
 
-// document.addEventListener('touchmove', function(e) {
-//   e.preventDefault();
-// }, false);
+  function horScroll() {
+    myScroll = new IScroll("#scrolling-wrapper", {
+      eventPassthrough: true,
+      scrollX: true,
+      scrollY: false,
+      scrollbars: true,
+      interactiveScrollbars: true,
+      mouseWheel: false,
+      keyBindings: true,
+      useTransition: false
+    });
+  }
 
+  horScroll();
 
-// fullpage settings
+  // document.addEventListener('touchmove', function(e) {
+  //   e.preventDefault();
+  // }, false);
 
-  $('#fullpage').fullpage({
-    anchors: ['mainPage', 'worksPage', 'pricePage', 'techPage', 'orderPage'],
-    menu: '#menu',
+  // fullpage settings
+
+  $("#fullpage").fullpage({
+    anchors: ["mainPage", "worksPage", "pricePage", "techPage", "orderPage"],
+    menu: "#menu",
     scrollBar: false,
     controlArrows: false,
     slidesNavigation: true,
-    slidesNavPosition: 'bottom',
-    paddingTop: '50px',
+    slidesNavPosition: "bottom",
+    paddingTop: "50px",
     // Докрутка
     // fitToSection: false,
     // scrollOverflow:true,
     loopBottom: true,
-    lazyLoading: true,//<img data-src="image.png">
+    lazyLoading: true, //<img data-src="image.png">
     responsiveWidth: 768,
-    onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
+    onSlideLeave: function(
+      anchorLink,
+      index,
+      slideIndex,
+      direction,
+      nextSlideIndex
+    ) {
       var leavingSlide = $(this);
 
       //настройка слайдера
 
-      function fade(slide){
+      function fade(slide) {
         setTimeout(function() {
-          $('.slide__title').css('display', 'none');
-          $(slide).fadeIn('4000');
+          $(".slide__title").css("display", "none");
+          $(slide).fadeIn("4000");
         }, 1000);
       }
 
@@ -99,109 +97,105 @@ horScroll();
       //   // break;
       // }
 
-
-
-      if(index == 1 && slideIndex == 0 && direction == 'right'){
-        fade('.title2');
+      if (index == 1 && slideIndex == 0 && direction == "right") {
+        fade(".title2");
       }
 
-      if(index == 1 && slideIndex == 1 && direction == 'right'){
-        fade('.title3');
+      if (index == 1 && slideIndex == 1 && direction == "right") {
+        fade(".title3");
       }
 
-      if(index == 1 && slideIndex == 2 && direction == 'right'){
-        fade('.title4');
+      if (index == 1 && slideIndex == 2 && direction == "right") {
+        fade(".title4");
       }
 
-      if(index == 1 && slideIndex == 3 && direction == 'right'){
-        fade('.title5');
+      if (index == 1 && slideIndex == 3 && direction == "right") {
+        fade(".title5");
       }
 
-      if(index == 1 && slideIndex == 4 && direction == 'left'){
-        fade('.title1');
+      if (index == 1 && slideIndex == 4 && direction == "left") {
+        fade(".title1");
       }
     }
+  }); // fullpage init
 
-  });// fullpage init
+  setInterval(function() {
+    $.fn.fullpage.moveSlideRight();
+  }, 5000);
 
-  setInterval(function(){
-      $.fn.fullpage.moveSlideRight();
-    }, 5000);
+  //nice-select for inputs
 
-//nice-select for inputs
+  $(".order-form select").niceSelect();
 
-$('.order-form select').niceSelect();
+  //toggle hamburger menu
 
-//toggle hamburger menu
+  $(".hamburger").on("click", function() {
+    $(this).toggleClass("is-active");
+    $(".nav-dropdown").slideToggle("slow");
+  });
 
-$('.hamburger').on('click', function(){
-  $(this).toggleClass("is-active");
-  $('.nav-dropdown').slideToggle('slow');
-});
+  $(".nav__link").on("click", function() {
+    $(".nav-dropdown").slideUp("fast");
+    $(".hamburger").removeClass("is-active");
+  });
 
-$('.nav__link').on('click', function(){
-  $('.nav-dropdown').slideUp('fast');
-  $('.hamburger').removeClass("is-active");
-});
+  //price-tabs
 
+  var $wrapper = $(".price-table"),
+    $allTabs = $wrapper.find(".price-table__block"),
+    $tabMenu = $wrapper.find(".price-table__item");
 
-
-//price-tabs
-
-  var $wrapper = $('.price-table'),
-      $allTabs = $wrapper.find('.price-table__block'),
-      $tabMenu = $wrapper.find('.price-table__item');
-
-  $allTabs.not(':first-of-type').hide();
+  $allTabs.not(":first-of-type").hide();
 
   $tabMenu.each(function(i) {
-    $(this).attr('data-tab', 'tab'+i);
-  })
+    $(this).attr("data-tab", "tab" + i);
+  });
   $allTabs.each(function(i) {
-    $(this).attr('data-tab', 'tab'+i);
-  })
+    $(this).attr("data-tab", "tab" + i);
+  });
 
-  $tabMenu.on('click', function() {
-
-    var dataTab = $(this).data('tab');
+  $tabMenu.on("click", function() {
+    var dataTab = $(this).data("tab");
     $getWrapper = $(this).closest($wrapper);
-    $getWrapper.find($tabMenu).removeClass('active');
-    $(this).removeClass('hovered');
-    $(this).addClass('active');
+    $getWrapper.find($tabMenu).removeClass("active");
+    $(this).removeClass("hovered");
+    $(this).addClass("active");
     $getWrapper.find($allTabs).hide();
-    $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').show();
-  })
+    $getWrapper
+      .find($allTabs)
+      .filter("[data-tab=" + dataTab + "]")
+      .show();
+  });
 
-  $tabMenu.on('mouseenter mouseleave',
-    function(){
-      if(!$(this).hasClass('active')){
-        $(this).toggleClass('hovered');
+  $tabMenu.on("mouseenter mouseleave", function() {
+    if (!$(this).hasClass("active")) {
+      $(this).toggleClass("hovered");
+    }
+  });
+
+  // mailsend
+
+  $("#form").on("submit", function(e) {
+    e.preventDefault();
+    var fd = new FormData(this);
+    $.ajax({
+      url: "../send.php",
+      type: "POST",
+      contentType: false,
+      processData: false,
+      data: fd,
+      success: function(msg) {
+        if (msg == "ok") {
+          $(".info").text("Отправлено");
+          $("input, textarea, select")
+            .not(":input[type=file], :input[type=submit]")
+            .val("");
+        } else {
+          $(".info").text("Ошибка");
+        }
       }
     });
-
-// mailsend
-
-$('#form').on('submit', function(e){
-   e.preventDefault();
-   var fd = new FormData( this );
-   $.ajax({
-    url: '../send.php',
-    type: 'POST',
-    contentType: false,
-    processData: false,
-    data: fd,
-    success: function(msg){
-    if(msg == 'ok') {
-      $('.info').text('Отправлено');
-      $('input, textarea, select').not(':input[type=file], :input[type=submit]').val('');
-    } else {
-       $('.info').text('Ошибка');
-      }
-     }
-   });
- });
-
-
-});//ready
+  });
+}); //ready
 
 //# sourceMappingURL=myscripts.js.map
