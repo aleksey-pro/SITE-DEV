@@ -11,24 +11,32 @@ $brand-orange: #E5861B
 /* fonts */
 
 $base-font: 16px
-@import url("https://fonts.googleapis.com/css?family=Jura|PT+Sans")
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans')
+
 @font-face
-    font-family: "Russo One";
-    src: url("../fonts/RussoOne.ttf") format("truetype")
+  font-family: "GothamPro"
+  src: url("../fonts/GothamPro-Medium.ttf") format("truetype")
+
+
+/* main */
 
 body
   font-family: 'PT Sans', sans-serif
   font-size: $base-font
   color: $text-color
 
-h1
-  font-family: 'Russo One', sans-serif
-  font-weight: normal
-
 a
   text-decoration: none
   color: $white
 
+h1, h2
+  font-family: 'GothamPro', sans-serif
+  font-size: 1.2rem!important
+  margin: 0!important
+  font-weight: bold
+  @include phones
+    font-size: 1rem!important
 
 /* pages */
 @import 'blocks/header'

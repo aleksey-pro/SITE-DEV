@@ -13,35 +13,34 @@
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  justify-content: space-evenly
+  height: 90%
+  justify-content: space-around
   @include phones
     height: 100%
 
-
+.order__title
+  font-size: 1.17rem
 
 .order-form
   display: flex
   flex-direction: column
   flex-basis: 320px
   font-size: 1.2em
-  input, textarea
-    font-size: 12px
-    line-height: 30px
-    border-radius: 5px
-    color: $text-color
-  textarea, input[type="text"],input[type="email"], .nice-select
-     margin: 3px
-     padding-left: 18px
-     padding-right: 30px
-  input[type="number"]
-    padding-left: 18px
+  textarea, input, .nice-select
+    margin: 5px 5px 5px 0
   label
     display: inline
 
 .contacts
-  padding: 20px
+  padding: 0 20px 20px
   @include phones
     padding: 0
+
+@include desktops()
+  .contacts h3
+    text-align: center
+  p
+    text-align: center
 
 .contacts__item
   display: table
@@ -69,23 +68,22 @@
 
 
 
-input[type='number'], input[type='submit']
+input[type='number']
   width: 5em
 
-textarea, input(not:input[type="file"])
+textarea, .custom-input
   background-color: #fff
   border-radius: 5px
   border: solid 1px #e8e8e8
   box-sizing: border-box
   font-size: 14px
   font-weight: normal
-  height: 32px
+  min-height: 32px
   line-height: 30px
   outline: none
   padding-left: 18px
   position: relative
   text-align: left !important
-
 
 
 input[type="file"]
@@ -94,11 +92,8 @@ input[type="file"]
   font-size: 0.8em
   cursor: pointer
 
-.order-form-send
-  display: inline-block
-  font-size: 1.2em
-  color: $text-color
-  padding: 5px 10px
-  background: #dae1e3;
-  align-self: left
-  margin: 2px
+input[type='submit']
+  min-height: 32px
+
+.info
+  margin-top: 1em

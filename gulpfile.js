@@ -77,14 +77,14 @@ gulp.task('svg-sprite', function() {
         pretty: true
       }
     }))
-    .pipe(cheerio({
+    // .pipe(cheerio({
       //run: function ($) {
         // $('[fill]').removeAttr('fill');
         // $('[stroke]').removeAttr('stroke');
         // $('[style]').removeAttr('style');
       //},
-      parserOptions: { xmlMode: true }
-    }))
+      // parserOptions: { xmlMode: true }
+    // }))
     .pipe(svgSprite({
       mode: {
         symbol: {
@@ -189,7 +189,7 @@ gulp.task ('watch', function(){
 	// gulp.watch('bower_components/**/*', ['bowerjs'], ['bowercss']);
 });
 
-gulp.task ('default', ['view', 'scripts', 'sass', 'browserSync', 'watch', 'jshint']);
+gulp.task ('default', ['view', 'bowerjs', 'bowercss', 'scripts', 'sass', 'browserSync', 'watch', 'jshint']);
 gulp.task ('build', ['view', 'scripts', 'images', 'favicons', 'fonts', 'bowerjs', 'bowercss', 'sass', 'sprite', 'svg-sprite']);
 gulp.task('del', function() {return del.sync('prod'); });
 
