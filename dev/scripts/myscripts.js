@@ -19,7 +19,7 @@ $(document).ready(function() {
     var workCardWidth = $(".grid__item").width();
     var workCardQnty = $(".grid__item").length;
     // var sw = (window.matchMedia("(max-width: 460px)").matches) ? workCardWidth * workCardQnty + 100 : (workCardWidth * (workCardQnty / 2) + 100);
-    var sw = workCardWidth * (workCardQnty / 2) + 100;
+    var sw = workCardWidth * Math.ceil(workCardQnty / 2) + 100;
     $("#scroller").css("width", sw + "px");
   }
 

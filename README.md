@@ -4,9 +4,8 @@
 
 1. npm i
 2. bower i -g
-3. bower init
-4. При добавлении работ - меняем ширину контейнера #scroller
-
+3. bower install
+4. Doesn't works with node 12 - switch to earlier because of gulp 3
 
 ___
 Инструменты:
