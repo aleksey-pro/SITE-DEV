@@ -1,4 +1,4 @@
-.main
+.advantages
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6c878e+0,17758f+100 */
   background: rgb(108,135,142); /* Old browsers */
   background: -moz-linear-gradient(left,  rgba(108,135,142,1) 0%, rgba(23,117,143,1) 100%); /* FF3.6-15 */
@@ -23,12 +23,20 @@
   font-size: 4em
   padding-left: 1em
   text-transform: uppercase
-  color: $white
   display: none
-  @include desktops
+  @media screen and (max-width: 1200px)
     font-size: 2em
     padding-left: 0.5em
 
+.slide__subtitle
+  font-family: 'Jura', sans-serif
+  font-size: 1em
+  text-transform: uppercase
+  display: none
+  padding-left: 0.5em
+  @media screen and (max-width: 1200px)
+    font-size: 0.5em
+    padding-left: 0.2em
 
 @media all and (max-width: 767px)
   .fullpage-wrapper

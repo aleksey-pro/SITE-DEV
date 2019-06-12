@@ -18,6 +18,9 @@
     flex-direction: column
     height: auto
 
+.price-table__variants li 
+  margin-top: 15px
+
 .price-table__nav
   display: flex
   flex-basis: 300px
@@ -50,6 +53,7 @@
 
 .price-table__title
   font-size: 2em
+  color: $text-color
   p
     margin: 0
     font-family: 'PT Sans', sans-serif;
@@ -66,30 +70,55 @@
 .price-table__block p
   margin: 0
 
+.price-table__contents
+  padding-left: 2em
+  flex-basis: 800px
+  display: flex
+  align-items: center
+  @include phones
+    padding: 0 5px
+
 
 .price-table__list
   @include cleanUlList()
   li
     margin-top: 0
-    margin-bottom: 5px
+    margin-bottom: 10px
 
-.price-table__list, .price-table__inner-list
+.price-table__list, .price-table__complex-list
   span
     color: darken($text-color, 10%)
     font-weight: bold
-    margin-top: 5px
+    margin-top: 7px
     @include phones
       display: block
 
-.price-table__contents
-  padding-left: 2em
-  color: $white
-  flex-basis: 800px
-  @include phones
-    padding: 0 5px
+.price-table__complex-list, .price-table__dop-list
+  list-style: none
+  li
+    margin-top: 15px
+    position: relative
+  li:before
+    content: ""
+    display: block
+    background-image: url(../images/node-icon.svg)
+    background-repeat: no-repeat
+    background-position: center
+    width: 45px
+    height: 10px
+    background-size: cover
+    padding-bottom: 2%
+    position: absolute
+    left: -50px
+    bottom: -14%
+
+
+.price-table__dop-list
+  li
+    margin-top: 25px 
 
 .underlined
   border-bottom: 1px dashed $text-color
   transition: all 0.2s ease-in
   &:hover
-    color: darken(#fff, 20%);
+    color: darken(#fff, 20%)

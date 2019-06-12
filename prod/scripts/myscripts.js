@@ -53,7 +53,7 @@ $(document).ready(function() {
   // fullpage settings
 
   $("#fullpage").fullpage({
-    anchors: ["mainPage", "worksPage", "pricePage", "techPage", "orderPage"],
+    anchors: ["advantages", "services", "works", "start", "order"],
     menu: "#menu",
     scrollBar: false,
     controlArrows: false,
@@ -80,6 +80,7 @@ $(document).ready(function() {
       function fade(slide) {
         setTimeout(function() {
           $(".slide__title").css("display", "none");
+          $(".slide__subtitle").css("display", "none");
           $(slide).fadeIn("4000");
         }, 1000);
       }

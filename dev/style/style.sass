@@ -5,7 +5,6 @@ $text-color: #5e5d5d
 $brand-blue: #17758F
 $brand-orange: #E5861B
 
-// @import 'sprite'
 @import 'mixins'
 
 /* fonts */
@@ -24,11 +23,12 @@ $base-font: 16px
 body
   font-family: 'PT Sans', sans-serif
   font-size: $base-font
-  color: $text-color
+  color: $white
 
 a
   text-decoration: none
   color: $white
+  
 
 h1, h2
   font-family: 'GothamPro', sans-serif
@@ -40,8 +40,8 @@ h1, h2
 
 /* pages */
 @import 'blocks/header'
-@import 'blocks/main'
+@import 'blocks/advantages'
+@import 'blocks/services'
 @import 'blocks/works'
-@import 'blocks/price'
-@import 'blocks/tech'
+@import 'blocks/start'
 @import 'blocks/order'

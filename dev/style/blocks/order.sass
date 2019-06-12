@@ -1,10 +1,11 @@
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#17758f+21,ffffff+100 */
 .order
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#63848c+38,ffffff+100 */
-  background: rgb(99,132,140); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(99,132,140,1) 38%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(99,132,140,1) 38%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(99,132,140,1) 38%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63848c', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  
+  background: rgb(23,117,143) /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(23,117,143,1) 21%, rgba(255,255,255,1) 100%) /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(23,117,143,1) 21%,rgba(255,255,255,1) 100%) /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(23,117,143,1) 21%,rgba(255,255,255,1) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17758f', endColorstr='#ffffff',GradientType=0 ) /* IE6-9 */
 
   overflow: hidden
   padding: 0 5px
@@ -20,6 +21,7 @@
 
 .order__title
   font-size: 1.17rem
+  font-weight: normal
 
 .order-form
   display: flex
@@ -33,11 +35,14 @@
 
 .contacts
   padding: 0 20px 20px
+  h3
+    font-weight: normal
+  p
   @include phones
     padding: 0
 
-@include desktops()
-  .contacts h3
+@media screen and (max-width: 1200px)
+  .contacts h3      
     text-align: center
   p
     text-align: center

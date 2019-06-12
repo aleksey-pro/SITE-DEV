@@ -21,7 +21,7 @@
 body {
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
-  color: #5e5d5d;
+  color: #ffffff;
 }
 
 a {
@@ -267,7 +267,7 @@ h1, h2 {
       transform: translateY(-5px) rotate(90deg);
 }
 
-.main {
+.advantages {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6c878e+0,17758f+100 */
   background: #6c878e;
   /* Old browsers */
@@ -296,7 +296,6 @@ h1, h2 {
   font-size: 4em;
   padding-left: 1em;
   text-transform: uppercase;
-  color: #ffffff;
   display: none;
 }
 
@@ -307,22 +306,239 @@ h1, h2 {
   }
 }
 
+.slide__subtitle {
+  font-family: 'Jura', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  display: none;
+  padding-left: 0.5em;
+}
+
+@media screen and (max-width: 1200px) {
+  .slide__subtitle {
+    font-size: 0.5em;
+    padding-left: 0.2em;
+  }
+}
+
 @media all and (max-width: 767px) {
   .fullpage-wrapper {
     overflow: hidden;
   }
 }
 
-.works {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#17758f+0,63848c+62 */
-  background: #17758f;
+.price {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#63848c+38,17758f+100 */
+  background: #63848c;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #17758f 0%, #63848c 62%);
+  background: linear-gradient(to bottom, #63848c 38%, #17758f 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17758f', endColorstr='#63848c',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63848c', endColorstr='#17758f',GradientType=0 );
   /* IE6-9 */
+}
+
+.price-table {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 90%;
+}
+
+@media screen and (max-width: 480px) {
+  .price-table {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    height: auto;
+  }
+}
+
+.price-table__variants li {
+  margin-top: 15px;
+}
+
+.price-table__nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.price-table__nav .active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .price-table__nav {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    margin-bottom: 1em;
+  }
+}
+
+.price-table__item {
+  -ms-flex: 1 0 100px;
+      flex: 1 0 100px;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: white;
+  opacity: 0.3;
+  overflow: hidden;
+  margin: 1em;
+  padding: 1em;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+  .price-table__item {
+    margin: 0;
+    -ms-flex: 1 0 50px;
+        flex: 1 0 50px;
+    text-align: center;
+  }
+}
+
+.price-table__item.hovered {
+  opacity: 0.5;
+}
+
+.price-table__title {
+  font-size: 2em;
+  color: #5e5d5d;
+}
+
+.price-table__title p {
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+}
+
+.price-table__title svg {
+  fill: #5e5d5d;
+}
+
+@media all and (max-width: 816px) {
+  .price-table__title {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .price-table__title {
+    font-size: 1em;
+  }
+}
+
+.price-table__block p {
+  margin: 0;
+}
+
+.price-table__contents {
+  padding-left: 2em;
+  -ms-flex-preferred-size: 800px;
+      flex-basis: 800px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .price-table__contents {
+    padding: 0 5px;
+  }
+}
+
+.price-table__list {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -moz-margin-before: 0;
+  -webkit-margin-after: 0;
+  -moz-margin-after: 0;
+  -webkit-margin-start: 0;
+  -moz-margin-start: 0;
+  -webkit-margin-end: 0;
+  -moz-margin-end: 0;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.price-table__list li {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.price-table__list span, .price-table__complex-list span {
+  color: #444444;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+@media screen and (max-width: 480px) {
+  .price-table__list span, .price-table__complex-list span {
+    display: block;
+  }
+}
+
+.price-table__complex-list, .price-table__dop-list {
+  list-style: none;
+}
+
+.price-table__complex-list li, .price-table__dop-list li {
+  margin-top: 15px;
+  position: relative;
+}
+
+.price-table__complex-list li:before, .price-table__dop-list li:before {
+  content: "";
+  display: block;
+  background-image: url(../images/node-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 45px;
+  height: 10px;
+  background-size: cover;
+  padding-bottom: 2%;
+  position: absolute;
+  left: -50px;
+  bottom: -14%;
+}
+
+.price-table__dop-list li {
+  margin-top: 25px;
+}
+
+.underlined {
+  border-bottom: 1px dashed #5e5d5d;
+  transition: all 0.2s ease-in;
+}
+
+.underlined:hover {
+  color: #cccccc;
+}
+
+.works {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#17758f+0,63848c+62 */
+  background: #17758f;
+  background: linear-gradient(to bottom, #17758f 0%, #63848c 62%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17758f', endColorstr='#63848c',GradientType=0 );
 }
 
 .grid {
@@ -430,6 +646,7 @@ h2.grid__title {
   padding-left: 1em;
   width: 50%;
   padding: 1em;
+  color: #5e5d5d;
 }
 
 .grid__link {
@@ -484,8 +701,8 @@ h2.grid__title {
   }
 }
 
-.price {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#63848c+38,17758f+100 */
+.start {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#63848c+38,17758f+100 */
   background: #63848c;
   /* Old browsers */
   /* FF3.6-15 */
@@ -494,233 +711,27 @@ h2.grid__title {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63848c', endColorstr='#17758f',GradientType=0 );
   /* IE6-9 */
-}
-
-.price-table {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: center;
-      justify-content: center;
-  height: 90%;
-}
-
-@media screen and (max-width: 480px) {
-  .price-table {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    height: auto;
-  }
-}
-
-.price-table__nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-
-.price-table__nav .active {
-  opacity: 1;
-}
-
-@media screen and (max-width: 480px) {
-  .price-table__nav {
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    margin-bottom: 1em;
-  }
-}
-
-.price-table__item {
-  -ms-flex: 1 0 100px;
-      flex: 1 0 100px;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  -ms-flex-align: center;
-      align-items: center;
-  background-color: white;
-  opacity: 0.3;
   overflow: hidden;
-  margin: 1em;
-  padding: 1em;
-  transition: all 0.2s ease-in-out;
+  padding: 0 5px;
 }
 
-@media screen and (max-width: 480px) {
-  .price-table__item {
-    margin: 0;
-    -ms-flex: 1 0 50px;
-        flex: 1 0 50px;
-    text-align: center;
-  }
+.start__list li {
+  margin-top: 10px;
 }
 
-.price-table__item.hovered {
-  opacity: 0.5;
+.start__list li:first-letter {
+  text-transform: capitalize;
 }
 
-.price-table__title {
-  font-size: 2em;
+.start__quiz {
+  list-style: none;
 }
 
-.price-table__title p {
-  margin: 0;
-  font-family: 'PT Sans', sans-serif;
-  font-weight: bold;
-}
-
-.price-table__title svg {
-  fill: #5e5d5d;
-}
-
-@media all and (max-width: 816px) {
-  .price-table__title {
-    font-size: 1.2em;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .price-table__title {
-    font-size: 1em;
-  }
-}
-
-.price-table__block p {
-  margin: 0;
-}
-
-.price-table__list {
-  list-style-type: none;
-  -webkit-margin-before: 0;
-  -moz-margin-before: 0;
-  -webkit-margin-after: 0;
-  -moz-margin-after: 0;
-  -webkit-margin-start: 0;
-  -moz-margin-start: 0;
-  -webkit-margin-end: 0;
-  -moz-margin-end: 0;
-  -webkit-padding-start: 0;
-  -moz-padding-start: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-.price-table__list li {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.price-table__list span, .price-table__inner-list span {
-  color: #444444;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-@media screen and (max-width: 480px) {
-  .price-table__list span, .price-table__inner-list span {
-    display: block;
-  }
-}
-
-.price-table__contents {
-  padding-left: 2em;
-  color: #ffffff;
-  -ms-flex-preferred-size: 800px;
-      flex-basis: 800px;
-}
-
-@media screen and (max-width: 480px) {
-  .price-table__contents {
-    padding: 0 5px;
-  }
-}
-
-.underlined {
-  border-bottom: 1px dashed #5e5d5d;
-  transition: all 0.2s ease-in;
-}
-
-.underlined:hover {
-  color: #cccccc;
-}
-
-.tech {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#17758f+0,63848c+62 */
-  background: #17758f;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #17758f 0%, #63848c 62%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17758f', endColorstr='#63848c',GradientType=0 );
-  /* IE6-9 */
-  overflow: hidden;
-}
-
-.tech__desc {
-  position: absolute;
-  padding: 3em 1em;
-  background: rgba(133, 170, 181, 0.6);
-  font-size: 1.5em;
-  color: #404040;
-  z-index: 2;
-}
-
-@media screen and (max-width: 480px) {
-  .tech__desc {
-    font-size: 1em;
-  }
-}
-
-.tech__desc--left {
-  top: 25%;
-  left: 5%;
-  max-width: 500px;
-}
-
-@media screen and (max-width: 480px) {
-  .tech__desc--left {
-    top: 10%;
-  }
-}
-
-.tech__desc--right {
-  top: 50%;
-  right: 10%;
-  max-width: 400px;
-}
-
-.tech__code {
-  position: absolute;
-  opacity: 0.8;
-}
-
-.tech__code:first-child {
-  left: 10%;
-  top: 20%;
-}
-
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#17758f+21,ffffff+100 */
 .order {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#63848c+38,ffffff+100 */
-  background: #63848c;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #63848c 38%, white 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63848c', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-9 */
+  background: #17758f;
+  background: linear-gradient(to bottom, #17758f 21%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17758f', endColorstr='#ffffff',GradientType=0 );
   overflow: hidden;
   padding: 0 5px;
 }
@@ -745,6 +756,7 @@ h2.grid__title {
 
 .order__title {
   font-size: 1.17rem;
+  font-weight: normal;
 }
 
 .order-form {
@@ -767,6 +779,10 @@ h2.grid__title {
 
 .contacts {
   padding: 0 20px 20px;
+}
+
+.contacts h3 {
+  font-weight: normal;
 }
 
 @media screen and (max-width: 480px) {

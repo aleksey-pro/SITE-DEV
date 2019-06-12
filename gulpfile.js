@@ -169,7 +169,7 @@ gulp.task('scripts', function () {
 
 
 gulp.task('jshint', function() {
-    return gulp.src('dev/scripts/*.js')
+    return gulp.src('dev/scripts/myscripts.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default')); //стилизуем вывод ошибок в консоль
 });

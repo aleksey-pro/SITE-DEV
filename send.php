@@ -15,7 +15,7 @@ $mail->Password = '7a068ae29'; // Ваш пароль
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 $mail->setFrom('anxieter@yandex.ru'); // Ваш Email
-$mail->addAddress('mail@sitedev.spb.ru'); // Email получателя
+$mail->addAddress('anxieter@gmail.com'); // Email получателя
 // $mail->addAddress('aleksey.flce@gmail.com'); // Еще один email, если нужно.
 
 // Прикрепление файлов
@@ -42,21 +42,13 @@ foreach($_POST['type'] as $k => $v) {
 	}
 }
 
-foreach($_POST['verstka'] as $k => $v) {
+foreach($_POST['usluga'] as $k => $v) {
 	if($v) {
-		$verstka = $v;
+		$usluga = $v;
 	}
 }
 
-foreach($_POST['adaptive'] as $k => $v) {
-	if($v) {
-		$adaptive = $v;
-	}
-}
-
-
-
-$mail->Body = "Имя: {$_POST['name']}<br> Email: {$_POST['email']}<br> Тип сайта: $type<br> Тип верстки: $verstka<br> Адаптивность: $adaptive<br> Число страниц: {$_POST['pagn']}<br> Наличие исходников: {$_POST['ishodn']}<br> Сообщение: " . nl2br($_POST['comment']);
+$mail->Body = "Имя: {$_POST['name']}<br> Email: {$_POST['email']}<br> Тематика: {$_POST['theme']}<br> Тип сайта: $type<br> Тип услуги: $usluga<br> Наличие исходников: {$_POST['ishodn']}<br> Наличие текстов: {$_POST['texts']}<br> Наличие технического задания: {$_POST['tz']}<br> Сообщение: " . nl2br($_POST['comment']);
 
 // Результат
 if(!$mail->send()) {

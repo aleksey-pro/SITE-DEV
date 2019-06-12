@@ -4,10 +4,6 @@
   @media screen and (min-width: 1441px)
     @content
 
-@mixin desktops()
-  @media screen and (max-width: 1200px)
-    @content
-
 @mixin tablets()
   @media screen and (max-width: 768px)
     @content
@@ -15,7 +11,6 @@
 @mixin phones()
   @media screen and (max-width: 480px)
     @content
-
 
 /* mixins */
 
@@ -56,4 +51,3 @@
         display: table
     &:after
         clear: both
-

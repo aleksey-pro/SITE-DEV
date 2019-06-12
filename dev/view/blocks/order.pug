@@ -1,4 +1,4 @@
-section.section.order#order
+section.section.order#orderPage
   .order__flex
     form(method="post" enctype="multipart/form-data")#form.order-form
       h3.order__title Оставить заявку
@@ -7,27 +7,26 @@ section.section.order#order
       span
       label(for="pagn") Выберите ваш email*
       input(type="email" name='email' id="email" required).order-form__input.custom-input
+      label(for="pagn") Укажите тематику сайта
+      input(type="text" name='theme' id="theme").order-form__input.custom-input
       label(for="type") Выберите тип сайта
       select.small(name='type[]' id="type").order-form__input
-        option Простой сайт
+        option Простой сайт-визитка
         option Лендинг
         option Сайт-блог
         option Корпоративный сайт
         option Интернет-магазин
-      label(for="verstka") Выберите тип верстки
-      select.small(name='verstka[]' id="verstka").order-form__input
-        option На основе ваших исходников и(или) ТЗ
-        option Верстка шаблона для CMS
-        option Сайт под ключ
-      label(for="adaptive") Нужна ли адаптивность
-      select.small(name='adaptive[]' id="adaptive").order-form__input
-        option Фиксированная
-        option Адаптивная
-      label(for="pagn") Выберите число страниц
-      input(type="number" name='pagn' id="pagn").order-form__input.custom-input
-      label(for="ishodn") Наличие у вас исходников
+      label(for="usluga") Выберите требуемый вид услуги
+      select.small(name='usluga[]' id="usluga").order-form__input
+        option Верстка сайта на базе макета
+        option Комплесная разработка сайта
+        option Другая услуга (укажите в комментарии)
+      label(for="ishodn") Наличие исходников дизайна
         input(type="hidden" name="ishodn" value="0")
         input(type="checkbox" name='ishodn' id="ishodn" value="1").order-form__input
+      label(for="ishodn") Наличие у вас текстов
+        input(type="hidden" name="texts" value="0")
+        input(type="checkbox" name='texts' id="texts" value="1").order-form__input
       label(for="tz") Наличие технического задания
         input(type="hidden" name="tz" value="0")
         input(type="checkbox" name='tz' id="tz" value="1").order-form__input
@@ -48,7 +47,7 @@ section.section.order#order
           use(xlink:href='images/SVG.svg#viber')
         span.contacts__name Позвонить: +7-9522326240
 
-      a(href="https://t.me/sitedevSpbRu").contacts__item
+      a(href="https://t.me/ISAEV_ALEKSEY").contacts__item
         svg(width='30px' height='30px').contacts__ico.contacts__ico--skype
           use(xlink:href='images/SVG.svg#telegram')
         span.contacts__name Написать в Telegram: sitedevSpbRu

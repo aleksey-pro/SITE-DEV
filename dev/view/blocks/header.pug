@@ -8,11 +8,11 @@ header.header
     mixin nav-mixin(name, data)
       li(class="nav__item inline" data-menuanchor=data)
         a.nav__link(href=`#${data}`)= name
-    +nav-mixin('главная', 'mainPage')
-    +nav-mixin('работы', 'worksPage')
-    +nav-mixin('стоимость', 'pricePage')
-    +nav-mixin('технологии', 'techPage')
-    +nav-mixin('заказать', 'orderPage')
+    +nav-mixin('преимущества', 'advantages')
+    +nav-mixin('услуги', 'services')
+    +nav-mixin('примеры', 'works')   
+    +nav-mixin('с чего начать', 'start')
+    +nav-mixin('заказать', 'order')
 
   .header__menu-mobile
     .hamburger#hamburger-9
@@ -20,18 +20,18 @@ header.header
       span.line
       span.line
 
-    ul.header__dropdown-menu.nav-dropdown
-      +nav-mixin('главная', 'mainPage')
-      +nav-mixin('работы', 'worksPage')
-      +nav-mixin('стоимость', 'pricePage')
-      +nav-mixin('технологии', 'techPage')
-      +nav-mixin('заказать', 'orderPage')
+    ul.header__dropdown-menu.nav-dropdown      
+      +nav-mixin('преимущества', 'advantages')
+      +nav-mixin('услуги', 'services')
+      +nav-mixin('примеры', 'works')   
+      +nav-mixin('с чего начать', 'start')
+      +nav-mixin('заказать', 'order')
 
   .header__btns
       a(href="tel:+79522326240").phone
         svg(width='30px' height='30px').contacts__ico.contacts__ico--viber
           use(xlink:href='images/SVG.svg#viber')
-      a(href="https://t.me/sitedevSpbRu" target="_blank").telegram
+      a(href="https://t.me/ISAEV_ALEKSEY" target="_blank").telegram
         svg(width='30px' height='30px').header__btns-ico
           use(xlink:href='images/SVG.svg#telegram')
 
