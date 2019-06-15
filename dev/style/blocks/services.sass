@@ -86,12 +86,16 @@
     margin-bottom: 10px
 
 .price-table__list, .price-table__complex-list
-  span
-    color: darken($text-color, 10%)
-    font-weight: bold
-    margin-top: 7px
-    @include phones
-      display: block
+  li
+    span
+      border-bottom: 1px solid #444444
+      padding: .3em 1em
+      margin-top: 7px    
+      @include phones
+        display: block
+  li:last-child    
+    span
+      border-bottom: none
 
 .price-table__complex-list, .price-table__dop-list
   list-style: none
@@ -110,7 +114,7 @@
     padding-bottom: 2%
     position: absolute
     left: -50px
-    bottom: -14%
+    top: 0
 
 
 .price-table__dop-list

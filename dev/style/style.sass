@@ -5,6 +5,7 @@ $text-color: #5e5d5d
 $brand-blue: #17758F
 $brand-orange: #E5861B
 
+// @import 'sprite'
 @import 'mixins'
 
 /* fonts */
@@ -36,7 +37,13 @@ h1, h2
   margin: 0!important
   font-weight: bold
   @include phones
-    font-size: 1rem!important
+    font-size: 0.5rem!important
+
+.section__title
+  text-align: center
+  display: none
+  @include tablets
+    display: block
 
 /* pages */
 @import 'blocks/header'

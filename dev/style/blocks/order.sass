@@ -8,7 +8,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17758f', endColorstr='#ffffff',GradientType=0 ) /* IE6-9 */
 
   overflow: hidden
-  padding: 0 5px
+  padding: 0 5px  
 
 .order__flex
   display: flex
@@ -16,6 +16,27 @@
   flex-wrap: wrap
   height: 90%
   justify-content: space-around
+  position: relative
+
+  &:before
+    content: ""
+    display: block
+    opacity: 0.2
+    background-image: url(../images/coffee.svg)
+    background-repeat: no-repeat
+    background-position: right bottom
+    width: 400px
+    background-size: cover
+    padding-bottom: 47vh
+    position: absolute
+    right: 0
+    bottom: 0
+    @include tablets
+       width: 350px
+       padding-bottom: 20vh
+    @include phones
+      width: 150px
+
   @include phones
     height: 100%
 

@@ -11,10 +11,15 @@
   padding: 0 5px
 
   &__list
-  	li  		
+  	li
   		margin-top: 10px
+      padding: 0
 
   		&:first-letter
   			text-transform: capitalize
+  &__list
+    @media screen and (min-width: 1200px)
+      margin-left: 10%
   &__quiz
-  	list-style: none
+    padding: 0
+    list-style: none

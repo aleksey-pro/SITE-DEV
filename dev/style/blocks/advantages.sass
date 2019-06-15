@@ -8,6 +8,7 @@
 
   overflow: hidden
   padding-right: 5px
+  position: relative
 
 .bg-logo svg
   width: 800px
@@ -18,26 +19,35 @@
   left: 20%
   opacity: 0.2
 
+
 .slide__title
   font-family: 'Jura', sans-serif
-  font-size: 4em
+  text-align: center
+  font-size: 3.5em
   padding-left: 1em
   text-transform: uppercase
-  display: none
+  display: none 
+  margin: 5vh 0
+  &:nth-child(2)
+    text-align: left
+  &:nth-child(3)
+    text-align: right  
   @media screen and (max-width: 1200px)
     font-size: 2em
     padding-left: 0.5em
 
-.slide__subtitle
-  font-family: 'Jura', sans-serif
-  font-size: 1em
-  text-transform: uppercase
-  display: none
-  padding-left: 0.5em
-  @media screen and (max-width: 1200px)
-    font-size: 0.5em
-    padding-left: 0.2em
-
 @media all and (max-width: 767px)
   .fullpage-wrapper
     overflow: hidden
+
+.arrow-down
+  width: 10em
+  height: 3em
+  position: absolute
+  bottom: 5em
+  left: 50%
+  margin-left: -5em
+  opacity: 0.3
+  &:hover
+    cursor: pointer
+
