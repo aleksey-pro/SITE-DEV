@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
-    "clean-css": "^3.4.19",
+    "clean-css": "^4.1.11",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cheerio": "^0.6.2",
